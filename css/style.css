@@ -1,7 +1,7 @@
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', 'Roboto', sans-serif;
 }
 
 .clearfix {
@@ -117,6 +117,9 @@ a {
 /* TODO: Replace with image later */
 #header {
   background-color: #484848;
+  background: url(../images/bridge-bkg.jpg);
+  background-position: left center;
+  background-size: cover;
 }
 
 .flex-box {
@@ -207,9 +210,50 @@ span {
   padding-bottom: 5%;
 }
 
+.work-entry ul {
+  font-size: 0.85em;
+  list-style-position: inside;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
 @media only screen and (min-width: 750px) {
   #skillsH3,
   .biopic {
     display: block;
   }
 }
+
+#header img {                
+  border: 6px solid #fff;
+  width: 160px;
+  margin: 10px 20px;
+  padding: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.welcome-message p {
+  color: #fff;
+  font-size: 1.0em;
+  margin-bottom: 1em;
+}
+
+h1#name + span {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
+#topContacts a,
+#footerContacts a {
+  display: inline;
+  color: #fff;
+}
+
+/*#workExperience .work-entry {
+  display: none;
+}*/
