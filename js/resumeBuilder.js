@@ -1,5 +1,5 @@
-
-// Bio object
+	
+// Bio JSON object
 var bio = {
 	"name" : "Jason Taylor",
 	"role" : "SF Bay Area Front-end Web Developer",
@@ -10,12 +10,12 @@ var bio = {
 		"linkedin" : "https://www.linkedin.com/in/jasonetaylor1",
 		"location" : "Redwood City, CA"
 	},
-	"welcomeMessage": "<p>My name is Jason Taylor and I am a web developer living and working in the San Francisco Bay Area.<\/p>\
-	<p>Feel free to look around my interactive resume and contact me for any open positions.<\/p>",
+	"welcomeMessage": "<p>My name is Jason Taylor and I am a web developer living and working in the San Francisco Bay Area.<\/p><p>Feel free to look around my interactive resume and contact me for any open positions.<\/p>",
 	"skills": ["HTML", "CSS", "Javascript", "JQuery", "AJAX", "Responsive design", "Photoshop"],
 	"biopic": "images/jason-taylor.jpg"
 };
 
+// Work JSON object
 var work = {
 	"jobs": [
 		{
@@ -23,15 +23,7 @@ var work = {
 			"title": "Web Designer",
 			"location": "Redwood City, CA",
 			"dates": "2006-Present",
-			"description": "<ul> \
-				<li>Designed websites using hand-coded HTML and Cascading Style sheets (CSS).<\/li> \
-				<li>Used PHP to create dynamic web pages that access back-end MySQL databases.<\/li> \
-				<li>Created websites using the Drupal content management system and providing additional functionality through custom-coded PHP modules.<\/li> \
-				<li>Used Adobe Photoshop and Illustrator to design site UI mockups and web graphics that were then sliced and optimized in preparation to create CSS based site layouts.<\/li> \
-				<li>Used JQuery, JavaScript to add client-side browser interactivity.<\/li> \
-				<li>Created graphics for print media such as brochures, flyers and postcards and worked with print houses to ensure quality results.<\/li><\/ul> \
-				<p>HTML, CSS, PHP, MySQL, JQuery, JavaScript, AJAX, Twitter Bootstrap, Codeigniter, Drupal CMS, ASP.NET/SQL Server, Git, GitHub<\/p> \
-				<a href=\"http:\/\/www.faultlinemedia.com\" target=\"_blank\">www.faultlinemedia.com<\/a>"
+			"description": "<ul><li>Designed websites using hand-coded HTML and Cascading Style sheets (CSS).<\/li><li>Used PHP to create dynamic web pages that access back-end MySQL databases.<\/li><li>Created websites using the Drupal content management system and providing additional functionality through custom-coded PHP modules.<\/li><li>Used Adobe Photoshop and Illustrator to design site UI mockups and web graphics that were then sliced and optimized in preparation to create CSS based site layouts.<\/li><li>Used JQuery, JavaScript to add client-side browser interactivity.<\/li><li>Created graphics for print media such as brochures, flyers and postcards and worked with print houses to ensure quality results.<\/li><\/ul><p>HTML, CSS, PHP, MySQL, JQuery, JavaScript, AJAX, Twitter Bootstrap, Codeigniter, Drupal CMS, ASP.NET/SQL Server, Git, GitHub<\/p><a href=\"http:\/\/www.faultlinemedia.com\" target=\"_blank\">www.faultlinemedia.com<\/a>"
 		},
 		{
 			"employer" : "Coding Dojo",
@@ -45,41 +37,33 @@ var work = {
 			"title" : "Advanced Software Engineer",
 			"location" : "Redwood City, CA",
 			"dates" : "August, 2000 - January, 2002",
-			"description" : "<ul><li>Used HTML, JAVA, Perl and SQL to create and maintain an application used by the Excite@Home engineering operations group to manage TELNET, IOS and SNMP authentication data on all devices across the @Home network.</\li> \
-				<li>Worked on the Network Management Database (NMDB), which consisted of a large-scale Oracle database and many Perl modules used to gather data from the entire Excite@Home network backbone.<\/li> \
-				<li>Created a shared library written in C utilizing the Oracle OCI (Oracle Call Interface) functions to allow external databases within the organization to write and retrieve specific information to and from the network management database (NMDB).<\/li> \
-				<li>Used Object Oriented Perl to create packages for various network devices by device type which were used to access the devices via TELNET/IOS or SNMP and retrieve configuration data as well as update authentication information.<\/li><\/ul>"
+			"description" : "<ul><li>Used HTML, JAVA, Perl and SQL to create and maintain an application used by the Excite@Home engineering operations group to manage TELNET, IOS and SNMP authentication data on all devices across the @Home network.<\/li><li>Worked on the Network Management Database (NMDB), which consisted of a large-scale Oracle database and many Perl modules used to gather data from the entire Excite@Home network backbone.<\/li><li>Created a shared library written in C utilizing the Oracle OCI (Oracle Call Interface) functions to allow external databases within the organization to write and retrieve specific information to and from the network management database (NMDB).<\/li><li>Used Object Oriented Perl to create packages for various network devices by device type which were used to access the devices via TELNET/IOS or SNMP and retrieve configuration data as well as update authentication information.<\/li><\/ul>"
 		},
 		{
 			"employer" : "Verilink Corporation",
 			"title" : "Software Engineer III",
 			"location" : "San Jose, CA",
 			"dates" : "1997 - 1999",
-			"description" : "<ul><li>Responsible for porting existing Windows 3.x network management code to the Win95 platform using C++ and the Microsoft Foundation Classes.<\/li> \
-				<li>Responsible for the continued development and maintenance of a large-scale network management application for Win95 with emphasis on GUI interface code.<\/li> \
-				<li>Used object oriented design techniques to create several base class software modules used to provide multiple hardware module support while providing a common user interface look and feel.<\/li> \
-				<li>Used SQL, ODBC and Oracle 8 Personal and Server versions to provide database support to the current NMS application.<\/li> \
-				<li>Interfaced with embedded systems’ engineers to develop a common API for the management of multiple hardware modules.<\/li><\/ul>"
+			"description" : "<ul><li>Responsible for porting existing Windows 3.x network management code to the Win95 platform using C++ and the Microsoft Foundation Classes.<\/li><li>Responsible for the continued development and maintenance of a large-scale network management application for Win95 with emphasis on GUI interface code.<\/li><li>Used object oriented design techniques to create several base class software modules used to provide multiple hardware module support while providing a common user interface look and feel.<\/li><li>Used SQL, ODBC and Oracle 8 Personal and Server versions to provide database support to the current NMS application.<\/li><li>Interfaced with embedded systems’ engineers to develop a common API for the management of multiple hardware modules.<\/li><\/ul>"
 		},
 		{
 			"employer" : "Verilink Corporation",
 			"title" : "Software Engineer II",
 			"location" : "San Jose, CA",
 			"dates" : "1993 - 1995",
-			"description" : "<ul><li>Responsible for the design, implementation and debugging of various software modules comprising a large-scale Windows 3.x network management application written in C++ and the Microsoft Foundation Classes.<\/li> \
-				<li>Utilized graphical skills to create computer images used in the development of the current Windows 3.x management application.<\/li> \
-				<li>Created a graphical software application (Test System 2000) that worked in conjunction with specific hardware modules to provide T1 test set functionality. The application later received the 1995 International Communications Association (ICA) Award for Innovative Product of the Year.<\/li><\/ul>"
+			"description" : "<ul><li>Responsible for the design, implementation and debugging of various software modules comprising a large-scale Windows 3.x network management application written in C++ and the Microsoft Foundation Classes.<\/li><li>Utilized graphical skills to create computer images used in the development of the current Windows 3.x management application.<\/li><li>Created a graphical software application (Test System 2000) that worked in conjunction with specific hardware modules to provide T1 test set functionality. The application later received the 1995 International Communications Association (ICA) Award for Innovative Product of the Year.<\/li><\/ul>"
 		}
 	]
 };
 
+// Education JSON object
 var education = {
 	"schools": [
 		{
 			"name" : "The Coding Dojo",
 			"location" : "Mountain View, CA",
 			"degree" : "N/A",
-			"majors" : [''],
+			"majors" : [],
 			"dates" : 2014,
 			"url" : ""
 		},
@@ -87,7 +71,7 @@ var education = {
 			"name": "University of Santa Cruz Extension",
 			"location": "Santa Clara, CA",
 			"degree" : "N/A",
-			"majors" : [''],
+			"majors" : [],
 			"dates": 2001,
 			"url" : ""
 		},
@@ -95,7 +79,7 @@ var education = {
 			"name": "College of San Mateo",
 			"location": "San Mateo, CA",
 			"degree" : "N/A",
-			"majors" : [''],
+			"majors" : [],
 			"dates": 1989,
 			"url" : ""
 		}
@@ -110,24 +94,44 @@ var education = {
 	]
 };
 
-// Projects - added URL and Technologies properties
+// Projects JSON object - added URL and Technologies properties not in specification
 var projects = {
 	"project" : [
 		{
-			"title": "CrisisGuard",
-			"dates": "2014",
-			"description": "A responsive HTML/CSS site",
-			"images": ["images/projects/thumb/crisisguard-d.jpg"],
-			"url": "http://www.crisisguard.com",
-			"technologies": ["HTML", "CSS"]
-		},
-		{
 			"title": "NoXcuses Fitness",
-			"dates": "2014",
+			"dates": "2015",
 			"description": "A responsive HTML/CSS site",
 			"images": ["images/projects/thumb/noxcusesfitness-d.jpg"],
 			"url": "http://www.noxcusesfitness.com",
-			"technologies": ["HTML", "CSS"]
+			"details" : {
+				"image" : "images/projects/large/noxcusesfitness.jpg",
+				"description" : "This is a PHP site that was fun to build",
+				"technologies": ["HTML", "CSS"]
+			}
+		},
+		{
+			"title": "CrisisGuard",
+			"dates": "2013",
+			"description": "A responsive HTML/CSS site",
+			"images": ["images/projects/thumb/crisisguard-d.jpg"],
+			"url": "http://www.crisisguard.com",
+			"details" : {
+				"image" : "images/projects/large/crisisguard.jpg",
+				"description" : "This is a PHP site that was fun to build",
+				"technologies": ["HTML", "CSS"]
+			}
+		},
+		{
+			"title": "Mariette Chocolates",
+			"dates": "2014",
+			"description": "A responsive HTML/CSS site",
+			"images": ["images/projects/thumb/mariettechocolates-d.jpg"],
+			"url": "http://www.mariettechocolates.com",
+			"details" : {
+				"image" : "images/projects/large/mariettechocolates.jpg",
+				"description" : "This is a PHP site that was fun to build",
+				"technologies": ["HTML", "CSS"]
+			}
 		}
 	]
 };
@@ -158,9 +162,10 @@ bio.display = function() {
 
 projects.display = function() {
 	for (var project in projects.project) {
-		$('#projects').append(HTMLprojectStart);
+		$('#projects .inner').append(HTMLprojectStart);
 
 		var projectTitle = HTMLprojectTitle.replace('%data%', projects.project[project].title);
+		projectTitle = projectTitle.replace('%id%', project);
 		$('.project-entry:last').append(projectTitle);
 
 		var projectDate = HTMLprojectDates.replace('%data%', projects.project[project].dates);
@@ -172,12 +177,30 @@ projects.display = function() {
 		if (projects.project[project].images.length > 0) {
 			for (image in projects.project[project].images) {
 				var image = HTMLprojectImage.replace('%data%', projects.project[project].images[image]);
+				image = image.replace('%id%', project);
 				$('.project-entry:last').append(image);
 			}
 		}
 
 		var projectURL = HTMLprojectURL.replace('%data%', projects.project[project].url);
 		$('.project-entry:last').append(projectURL);
+
+		// Build the project details section
+		$('#project-details').append(HTMLprojectDetailStart.replace('%id', 'detail-' + project));
+		
+		var detailImage = HTMLprojectDetailImage.replace('%data%', projects.project[project].details.image);
+		detailImage = detailImage.replace('%name%', projects.project[project].title);
+		$('.project-detail .inner:last').append(detailImage);
+
+		var detailDesc = HTMLprojectDetailDesc.replace('%name%', projects.project[project].title);
+		detailDesc = detailDesc.replace('%data%', projects.project[project].details.description);
+		$('.project-detail .inner:last').append(detailDesc);
+
+		if (projects.project[project].details.technologies.length > 0) {
+			for (technology in projects.project[project].details.technologies) {
+				$('.project-details .inner:last').append(HTMLprojectDetailTech.replace('%data%', projects.project[project].details.technologies[technology]));
+			}
+		}
 	}
 }
 
@@ -249,3 +272,4 @@ education.display();
 // });
 
 $('#mapDiv').append(googleMap);
+

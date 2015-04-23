@@ -38,10 +38,10 @@ var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectTitle = '<a href="#" data-featherlight="#detail-%id%">%data%</a>'; //<a href="#">%data%</a>
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<a href="#" data-featherlight="#detail-%id%"><img src="%data%"></a>'; //<img src="%data%">';
 var HTMLprojectURL = '<a href="%data%" target="_blank">Launch Site</a>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
@@ -59,6 +59,12 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
+
+// Added new Project Detail template
+var HTMLprojectDetailStart = '<div id="%id" class="project-detail"><div class="inner flex-box"></div></div>';
+var HTMLprojectDetailImage = '<img src="%data%" alt="%name%" class="project-image flex-item">';
+var HTMLprojectDetailDesc = '<div class="project-desc flex-item"><h2>%name%</h2><p>%data%</p><ul class="project-tech"></ul></div>';
+var HTMLprojectDetailTech = '<li class="orange-text">%data%</li>';
 
 
 /*

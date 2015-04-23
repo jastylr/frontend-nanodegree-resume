@@ -72,7 +72,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
     <div id="projects">
       <h2>Projects</h2>
-      <a href="myhtml.html" data-featherlight="ajax">Open ajax content in lightbox</a>
+      <div class="inner flex-box"></div>
+    </div>
+    <div id="project-details">
+      <!-- New section to display project details in a jQuery lightbox -->
     </div>
     <div id="education" class='gray'>
       <h2>Education</h2>
@@ -142,6 +145,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     }
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.backgroundColor = 'black';
+    }
+    if(document.getElementsByClassName('project-detail').length === 0) {
+      document.getElementById('project-details').style.display = 'none';
     }
   </script>
 </body>
