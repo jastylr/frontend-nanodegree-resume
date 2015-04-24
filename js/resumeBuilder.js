@@ -10,7 +10,7 @@ var bio = {
 		"linkedin" : "https://www.linkedin.com/in/jasonetaylor1",
 		"location" : "Redwood City, CA"
 	},
-	"welcomeMessage": "<p>My name is Jason Taylor and I am a web developer living and working in the San Francisco Bay Area.<\/p><p>Feel free to look around my interactive resume and contact me for any open positions.<\/p>",
+	"welcomeMessage": "<p>Hello! My name is Jason Taylor and I am a web developer living and working in the San Francisco Bay Area. I enjoy creating engaging projects which require using both the left and right sides of my brain to create a visually appealing yet functional experience.<\/p><p>Feel free to peruse my resume and contact me for any open positions if you like what you see. Thanks for stopping by!<\/p>",
 	"skills": ["HTML", "CSS", "Javascript", "JQuery", "AJAX", "Responsive design", "Photoshop"],
 	"biopic": "images/jason-taylor.jpg"
 };
@@ -62,15 +62,15 @@ var education = {
 		{
 			"name" : "The Coding Dojo",
 			"location" : "Mountain View, CA",
-			"degree" : "N/A",
+			"degree" : "",
 			"majors" : [],
-			"dates" : 2014,
+			"dates" : 2014,	// Specification said use Integer type here
 			"url" : ""
 		},
 		{
 			"name": "University of Santa Cruz Extension",
 			"location": "Santa Clara, CA",
-			"degree" : "N/A",
+			"degree" : "",
 			"majors" : [],
 			"dates": 2001,
 			"url" : ""
@@ -78,7 +78,7 @@ var education = {
 		{
 			"name": "College of San Mateo",
 			"location": "San Mateo, CA",
-			"degree" : "N/A",
+			"degree" : "",
 			"majors" : [],
 			"dates": 1989,
 			"url" : ""
@@ -89,7 +89,7 @@ var education = {
 			"title": "Front-end Web Development Nanodegree",
 			"school": "Udacity",
 			"date": 2015,
-			"url" : "http://www.udacity.com"
+			"url" : "https://www.udacity.com/course/nd001"
 		}
 	]
 };
@@ -189,13 +189,14 @@ bio.display = function() {
 
 	// Check if the skills array is empty or not and if not, output the skills
 	if (bio.skills.length > 0) {
-		$('#bio-details .col-md-10').append(HTMLskillsStart);
+		$('#skillset').append(HTMLskillsStart);
 		for(skill in bio.skills) {
 			$('#skills').append(HTMLskills.replace('%data%', bio.skills[skill]));
 		}
 	}
 }
 
+// Display method for Projects
 projects.display = function() {
 	for (var project in projects.project) {
 		$('#projects .inner').append(HTMLprojectStart);
@@ -246,6 +247,7 @@ projects.display = function() {
 	}
 }
 
+// Display method for Work Experience
 work.display = function() {
 	for (job in work.jobs) {
 		$('#workExperience').append(HTMLworkStart);
@@ -261,6 +263,7 @@ work.display = function() {
 	}
 }
 
+// Display method for Education
 education.display = function() {
 	$('#education').append(HTMLschoolStart);
 	for (school in education.schools) {
@@ -272,9 +275,23 @@ education.display = function() {
 
 		if (education.schools[school].majors.length > 0) {
 			for (major in education.schools[school].majors) {
-				$('.education-entry:last').append(HTMLschoolMajor.replace('%data%', education.schools[school].majors[major]));
+				if (education.schools[school].majors[major] > 0) {
+					$('.education-entry:last').append(HTMLschoolMajor.replace('%data%', education.schools[school].majors[major]));
+				}
 			}
 		}
+	}
+
+	for (course in education.onlineCourses) {
+		$('.education-entry:last').append(HTMLonlineClasses);
+		var onlineTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[course].title );
+		
+		// Added URL into the title link rather than as a separate link
+		onlineTitle = onlineTitle.replace('%url%', education.onlineCourses[course].url);
+		var onlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[course].school);
+		$('.education-entry:last').append(onlineTitle + onlineSchool);
+
+		$('.education-entry:last').append(HTMLonlineDates.replace('%data%', education.onlineCourses[course].date));
 	}
 }
 
