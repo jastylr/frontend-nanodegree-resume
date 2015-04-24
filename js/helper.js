@@ -256,10 +256,10 @@ window.addEventListener('load', initializeMap);
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
 window.addEventListener('resize', function(e) {
-  var h = $(window).height(),
-        offsetTop = 320; // Calculate the top offset
+  // var h = $(window).height(),
+  //       offsetTop = 320; // Calculate the top offset
 
-    $('#map').css('height', (h - offsetTop));
+  //   $('#map').css('height', (h - offsetTop));
   //Make sure the map bounds get updated on page resize
   map.fitBounds(mapBounds);
 });
