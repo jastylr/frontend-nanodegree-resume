@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <!--
 This is an HTML document. It contains information about how elements in the website
 are arranged. In other words, it describes the layout of a website.
@@ -22,6 +22,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <title>Resume</title>
 
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,600' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
   <link rel="stylesheet" href="css/featherlight.min.css">
   <link rel="stylesheet" href="css/featherlight.gallery.min.css">
@@ -47,13 +49,16 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
 
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
+
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body unresolved>
   <div id="main">
@@ -63,27 +68,39 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content clearfix">
-      <ul id="topContacts" class='flex-box'></ul>
+    <div id="header" class="container-fluid center-content clearfix">
+      <div class="row">
+        <div id="bio-name" class="col-md-12"></div>
+      </div>
+      <div class="row">
+        <ul id="topContacts" class='flex-box'></ul>
+      </div>
+      <div class="row">
+        <div id="bio-details" class="row"></div>
+      </div>
+      <div class="row">
+        <div id="skillset" class="col-md-12"></div>
+      </div>
     </div>
     <div style='clear: both;'></div>
-    <div id="workExperience" class='gray'>
+    <div id="workExperience" class='container-fluid gray'>
       <h2>Work Experience</h2>
     </div>
-    <div id="projects">
+    <div id="projects" class="container-fluid">
       <h2>Projects</h2>
-      <div class="inner flex-box"></div>
+      <div class="row inner"></div>
     </div>
-    <div id="project-details">
+    <div id="project-details" class="container-fluid">
       <!-- New section to display project details in a jQuery lightbox -->
     </div>
-    <div id="education" class='gray'>
+    <div id="education" class='container-fluid gray'>
       <h2>Education</h2>
     </div>
-    <div id="mapDiv">
+    <div id="mapDiv" class="container-fluid">
       <h2>Where I've Lived and Worked</h2>
+      <div class="row"></div>
     </div>
-    <div id="letsConnect" class='dark-gray'>
+    <div id="letsConnect" class='container-fluid dark-gray'>
       <h2 class='orange center-text'>Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">
       </ul>

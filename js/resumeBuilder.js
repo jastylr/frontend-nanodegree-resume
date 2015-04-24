@@ -1,4 +1,4 @@
-	
+
 // Bio JSON object
 var bio = {
 	"name" : "Jason Taylor",
@@ -98,39 +98,75 @@ var education = {
 var projects = {
 	"project" : [
 		{
+			"title": "Faultline Media Solutions",
+			"dates": "2014",
+			"description": "This is my personal website",
+			"images": ["images/projects/thumb/faultlinemedia-d.jpg"],
+			"details" : {
+				"url": "http://www.faultlinemedia.com",
+				"image" : "images/projects/large/faultlinemedia.jpg",
+				"description" : "This is my personal business website.",
+				"technologies": ["HTML", "CSS", "JQuery", "Bootstrap"]
+			}
+		},
+		{
 			"title": "NoXcuses Fitness",
 			"dates": "2015",
-			"description": "A responsive HTML/CSS site",
+			"description": "A responsive website design that incorporates the MindBody API",
 			"images": ["images/projects/thumb/noxcusesfitness-d.jpg"],
-			"url": "http://www.noxcusesfitness.com",
 			"details" : {
+				"url": "http://www.noxcusesfitness.com",
 				"image" : "images/projects/large/noxcusesfitness.jpg",
 				"description" : "This is a PHP site that was fun to build",
-				"technologies": ["HTML", "CSS"]
+				"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Responsive Design"]
 			}
 		},
 		{
 			"title": "CrisisGuard",
 			"dates": "2013",
-			"description": "A responsive HTML/CSS site",
+			"description": "A responsive PHP site with a custom design",
 			"images": ["images/projects/thumb/crisisguard-d.jpg"],
-			"url": "http://www.crisisguard.com",
 			"details" : {
+				"url": "http://www.crisisguard.com",
 				"image" : "images/projects/large/crisisguard.jpg",
 				"description" : "This is a PHP site that was fun to build",
-				"technologies": ["HTML", "CSS"]
+				"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Responsive Design"]
 			}
 		},
 		{
 			"title": "Mariette Chocolates",
 			"dates": "2014",
-			"description": "A responsive HTML/CSS site",
+			"description": "A responsive e-commerce site using Drupal and custom theme design",
 			"images": ["images/projects/thumb/mariettechocolates-d.jpg"],
-			"url": "http://www.mariettechocolates.com",
 			"details" : {
+				"url": "http://www.mariettechocolates.com",
 				"image" : "images/projects/large/mariettechocolates.jpg",
 				"description" : "This is a PHP site that was fun to build",
-				"technologies": ["HTML", "CSS"]
+				"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Responsive Design", "Drupal"]
+			}
+		},
+		{
+			"title": "Christian Okoye",
+			"dates": "2013",
+			"description": "Website of ex-Kansas City Chief and NFL great, Christian Okoye (\"The Nigerian Nightmare\")",
+			"images": ["images/projects/thumb/christianokoye-d.jpg"],
+			"details" : {
+				"url": "http://www.christianokoye.com",
+				"image" : "images/projects/large/christianokoye.jpg",
+				"description" : "This is a PHP site that was fun to build",
+				"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Drupal"]
+			}
+		},
+		{
+			"title": "Soul Pilates",
+			"dates": "2014",
+			"description": "Responsive website with a custom design and integrated MindBody API for class schedules",
+			"images": ["images/projects/thumb/soulpilates-d.jpg"],
+			"details" : {
+				"url": "http://www.soulpilates.com",
+				"image" : "images/projects/large/soulpilates.jpg",
+				"description" : "This is a PHP site that was fun to build",
+				"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "MindBody API", "Drupal"]
 			}
 		}
 	]
@@ -138,10 +174,10 @@ var projects = {
 
 // Display method used to output bio information to the screen
 bio.display = function() {
-	$('#header').prepend(HTMLheaderRole.replace('%data%', bio.role));
-	$('#header').prepend(HTMLheaderName.replace('%data%', bio.name));
-	$('#header').append(HTMLbioPic.replace('%data%', bio.biopic));
-	$('#header').append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage));
+	$('#bio-name').append(HTMLheaderName.replace('%data%', bio.name));
+	$('#bio-name').append(HTMLheaderRole.replace('%data%', bio.role));
+	$('#bio-details').append(HTMLbioPic.replace('%data%', bio.biopic));
+	$('#bio-details').append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage));
 
 	var bioMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
 	var bioEmail = HTMLemail.replace('%data%', bio.contacts.email);
@@ -153,7 +189,7 @@ bio.display = function() {
 
 	// Check if the skills array is empty or not and if not, output the skills
 	if (bio.skills.length > 0) {
-		$('#header').append(HTMLskillsStart);
+		$('#bio-details .col-md-10').append(HTMLskillsStart);
 		for(skill in bio.skills) {
 			$('#skills').append(HTMLskills.replace('%data%', bio.skills[skill]));
 		}
@@ -182,7 +218,10 @@ projects.display = function() {
 			}
 		}
 
-		var projectURL = HTMLprojectURL.replace('%data%', projects.project[project].url);
+		var projectView = HTMLprojectView.replace('%data%', project);
+		$('.project-entry:last').append(projectView);
+
+		var projectURL = HTMLprojectURL.replace('%data%', projects.project[project].details.url);
 		$('.project-entry:last').append(projectURL);
 
 		// Build the project details section
@@ -196,9 +235,12 @@ projects.display = function() {
 		detailDesc = detailDesc.replace('%data%', projects.project[project].details.description);
 		$('.project-detail .inner:last').append(detailDesc);
 
+		projectURL = HTMLprojectDetailURL.replace(/%data%/g, projects.project[project].details.url);
+		$('.project-url:last').append(projectURL);
+
 		if (projects.project[project].details.technologies.length > 0) {
 			for (technology in projects.project[project].details.technologies) {
-				$('.project-details .inner:last').append(HTMLprojectDetailTech.replace('%data%', projects.project[project].details.technologies[technology]));
+				$('.project-tech:last').append(HTMLprojectDetailTech.replace('%data%', projects.project[project].details.technologies[technology]));
 			}
 		}
 	}
@@ -238,7 +280,7 @@ education.display = function() {
 
 // makeLink - Used to take a web address and convert it into a clickable link
 // with optional display text
-function makeLink(address, text, strip_protocol=true, new_window=true) {
+function makeLink(address, text, strip_protocol, new_window) {
 	
 	if (!address) {
 		return;
@@ -271,5 +313,5 @@ education.display();
 // 	$('.work-entry').slideToggle();
 // });
 
-$('#mapDiv').append(googleMap);
+$('#mapDiv .row:first').append(googleMap);
 

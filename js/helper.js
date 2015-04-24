@@ -24,25 +24,26 @@ var HTMLlinkedIn = '<li class="flex-item"><span class="orange-text">linkedin</sp
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLbioPic = '<div class="col-md-2 col-sm-3"><img src="%data%" class="biopic"></div>';
+var HTMLwelcomeMsg = '<div class="col-md-10 col-sm-9"><span class="welcome-message">%data%</span></div>';
 
 var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
+var HTMLworkStart = '<div class="row"><div class="work-entry col-md-12"></div></div>';
+var HTMLworkEmployer = '<a class="employer" href="#">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#" data-featherlight="#detail-%id%">%data%</a>'; //<a href="#">%data%</a>
+var HTMLprojectStart = '<div class="project-entry col-md-4 col-sm-6 clearfix"></div>';
+var HTMLprojectTitle = '<a class="project-title" href="#" data-featherlight="#detail-%id%">%data%</a>'; //<a href="#">%data%</a>
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
+var HTMLprojectDescription = '<p class="project-description"><br>%data%</p>';
 var HTMLprojectImage = '<a href="#" data-featherlight="#detail-%id%"><img src="%data%"></a>'; //<img src="%data%">';
-var HTMLprojectURL = '<a href="%data%" target="_blank">Launch Site</a>';
+var HTMLprojectURL = '<a class="url-btn btn btn-info" href="%data%" target="_blank">Launch Site</a>';
+var HTMLprojectView = '<a class="details-btn btn btn-info" href="#" data-featherlight="#detail-%data%">View Details</a>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -58,12 +59,13 @@ var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
-var googleMap = '<div id="map"></div>';
+var googleMap = '<div class="col-md-12"><div id="map"></div></div>';
 
 // Added new Project Detail template
 var HTMLprojectDetailStart = '<div id="%id" class="project-detail"><div class="inner flex-box"></div></div>';
+var HTMLprojectDetailURL = '<a href="%data%" target="_blank">%data%</a>';
 var HTMLprojectDetailImage = '<img src="%data%" alt="%name%" class="project-image flex-item">';
-var HTMLprojectDetailDesc = '<div class="project-desc flex-item"><h2>%name%</h2><p>%data%</p><ul class="project-tech"></ul></div>';
+var HTMLprojectDetailDesc = '<div class="project-desc flex-item"><h2>%name%</h2><div class="project-url"></div><p>%data%</p><h4>Technologies used:</h4><ul class="project-tech"></ul></div>';
 var HTMLprojectDetailTech = '<li class="orange-text">%data%</li>';
 
 
@@ -75,6 +77,14 @@ $(document).ready(function() {
     var iName = inName() || function(){};
     $('#name').html(iName);  
   });
+
+  $(".project-entry").delegate("img", "mouseover mouseout", function(e) {
+      if (e.type == 'mouseover') {
+        jQuery(".project-entry img").not(this).dequeue().animate({opacity: "0.3"}, 300);
+      } else {
+        jQuery(".project-entry img").not(this).dequeue().animate({opacity: "1"}, 300);
+      }
+    });
 });
 
 /*
@@ -246,6 +256,13 @@ window.addEventListener('load', initializeMap);
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
 window.addEventListener('resize', function(e) {
+  var h = $(window).height(),
+        offsetTop = 320; // Calculate the top offset
+
+    $('#map').css('height', (h - offsetTop));
   //Make sure the map bounds get updated on page resize
- map.fitBounds(mapBounds);
+  map.fitBounds(mapBounds);
 });
+
+
+
