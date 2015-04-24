@@ -6,4 +6,4 @@ I eventually added Boostrap to the site to provide a responsive, grid layout and
 
 ### Screenshot:
 Your resume will look something like this
-![](https://github.com/jastylr/jastylr.github.io/images/screenshot)
+![](/images/screenshot.jpg?raw=true)
