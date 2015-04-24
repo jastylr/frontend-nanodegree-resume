@@ -4,6 +4,10 @@ This resume started out as a project for the Udacity Front-end Web Development N
 
 I eventually added Boostrap to the site to provide a responsive, grid layout and I also used the JQuery Featherlight plugin to provide lightbox capabilities to the individual Project sections.
 
+### Link to live version:
+
+http://jastylr.github.io
+
 ### Screenshot:
 
 ![](/images/screenshot.jpg?raw=true)
