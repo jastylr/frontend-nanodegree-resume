@@ -33,7 +33,7 @@ h2 {
   font-size: 24px;
   color: #999999;
   line-height: 29px;
-  padding: 10px;
+  /*padding: 10px;*/
 }
 
 h3 {
@@ -51,9 +51,9 @@ h4 {
 }
 
 h2, h3, h4, h5 {
-  padding:10px;
-  padding-left: 4%;
-  padding-right: 4%;
+  /*padding:10px;*/
+  /*padding-left: 4%;
+  padding-right: 4%;*/
 }
 
 img {
@@ -160,13 +160,14 @@ ul {
 }
 
 .biopic {
+  border: 6px solid #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  border: 6px solid #fff;
+  border-radius: 50%;
   padding: 0;
-  width: 200px;
+  max-width: 200px;
   margin-bottom: 20px;
 }
 
@@ -275,6 +276,7 @@ h1#name + span {
 }
 
 .project-image {
+  height: 100%;
   width: 60%;
   max-width: 600px;
 }
@@ -309,6 +311,31 @@ h1#name + span {
 .education-entry h3 {
   padding-left: 0;
 }
+
+#map {
+  display: block;
+  height: 320px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#mapDiv {
+  height: 420px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+.work-entry ul {
+  clear: both;
+  font-size: 1em;
+  list-style-position: inside;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.work-entry li {
+    padding: .2em 0;
+  }
 
 @media only screen and (max-width: 1200px) {
   #letsConnect {
@@ -349,7 +376,8 @@ h1#name + span {
     display: block;
     text-align: center;
   }
-  #skills {
+  #skills,
+  #skillsH3 {
     display: none;
   }
   #bio-details {
@@ -416,26 +444,6 @@ h1#name + span {
     display: block;
     text-align: center;
   }
-}
-
-#map {
-  display: block;
-  height: 320px;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-#mapDiv {
-  height: 420px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
-.work-entry ul {
-  font-size: 1em;
-  list-style-position: inside;
-  list-style-type: disc;
-  padding-left: 20px;
 }
 
 @media only screen and (min-width: 768px) {
