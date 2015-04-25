@@ -160,8 +160,8 @@ ul {
 }
 
 .biopic {
-  /*float: left;*/
-  padding: 10px;
+  border: 6px solid #fff;
+  padding: 0;
   width: 200px;
   margin-bottom: 20px;
 }
@@ -209,8 +209,6 @@ hr {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  border: 6px solid #fff;
-  padding: 0;
 }
 
 .welcome-message p {
@@ -369,6 +367,11 @@ h1#name + span {
   .welcome-message p {
     font-size: 1.0em;
     text-align: center;
+  }
+
+  .work-entry li {
+    font-size: 1.2em;
+    padding: .3em 0;
   }
   
   .project-entry:nth-child(4n+2) {
