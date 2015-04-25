@@ -231,6 +231,7 @@
 			// Only display the "Launch Site" button if there is a live site to view
 			if (projects.project[project].details.url.length > 0) {
 				var projectURL = HTMLprojectURL.replace('%data%', projects.project[project].details.url);
+				projectURL = projectURL.replace('%title%', projects.project[project].title)
 				$('.project-entry:last').append(projectURL);
 			}
 
@@ -275,8 +276,9 @@
 			var formatedEmployerTitle = formattedEmployer + formattedTitle;
 
 			$('.work-entry:last').append(formatedEmployerTitle);
-			$('.work-entry:last').append(HTMLworkDates.replace('%data%', work.jobs[job].dates));
-			$('.work-entry:last').append(HTMLworkLocation.replace('%data%', work.jobs[job].location));
+			$('.work-entry:last').append(HTMLworkDateLocStart);
+			$('.work-entry:last .date-location').append(HTMLworkDates.replace('%data%', work.jobs[job].dates));
+			$('.work-entry:last .date-location').append(HTMLworkLocation.replace('%data%', work.jobs[job].location));
 			$('.work-entry:last').append(HTMLworkDescription.replace('%data%', work.jobs[job].description));
 		}
 	}

@@ -64,7 +64,7 @@ img {
 
 .date-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
   color: #999999;
   line-height: 16px;
   float: left;
@@ -72,7 +72,7 @@ img {
 
 .location-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
   color: #999999;
   line-height: 16px;
   float: right;
@@ -328,8 +328,9 @@ h1#name + span {
 .work-entry ul {
   clear: both;
   font-size: 1em;
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-type: disc;
+  margin-top: 15px;
   padding-left: 20px;
 }
 
@@ -447,7 +448,6 @@ h1#name + span {
 }
 
 @media only screen and (min-width: 768px) {
-  #skillsH3,
   .biopic {
     display: block;
   }

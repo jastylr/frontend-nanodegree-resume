@@ -24,8 +24,8 @@ var HTMLlinkedIn = '<li class="flex-item"><span class="orange-text">linkedin</sp
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
-var HTMLbioPic = '<div class="col-md-3 col-lg-2"><div class="biopic"><img src="%data%"></div></div>';
-var HTMLwelcomeMsg = '<div class="col-md-9 col-lg-10"><span class="welcome-message">%data%</span></div>';
+var HTMLbioPic = '<div class="col-sm-3 col-lg-2"><div class="biopic"><img src="%data%"></div></div>';
+var HTMLwelcomeMsg = '<div class="col-sm-9 col-lg-10"><span class="welcome-message">%data%</span></div>';
 
 var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
@@ -33,17 +33,18 @@ var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></
 var HTMLworkStart = '<div class="row"><div class="work-entry col-md-12"></div></div>';
 var HTMLworkEmployer = '<a class="employer" href="#">%data%';
 var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkDateLocStart = '<div class="date-location clearfix"></div>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p>%data%</p>';
+var HTMLworkDescription = '%data%';
 
 var HTMLprojectStart = '<div class="project-entry col-md-4 col-sm-6 clearfix"></div>';
 var HTMLprojectTitle = '<a class="project-title" href="#" data-featherlight="#detail-%id%">%data%</a>'; //<a href="#">%data%</a>
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p class="project-description"><br>%data%</p>';
 var HTMLprojectImage = '<a href="#" data-featherlight="#detail-%id%"><img src="%data%"></a>'; //<img src="%data%">';
-var HTMLprojectURL = '<a class="url-btn btn btn-info" href="%data%" target="_blank">Launch Site</a>';
-var HTMLprojectView = '<a class="details-btn btn btn-info" href="#" data-featherlight="#detail-%data%">View Details</a>';
+var HTMLprojectURL = '<a class="url-btn btn btn-info" href="%data%" target="_blank" data-toggle="tooltip" data-placement="top" title="Launch %title%">Launch Site</a>';
+var HTMLprojectView = '<a class="details-btn btn btn-info" href="#" data-featherlight="#detail-%data%" data-toggle="tooltip" data-placement="top" title="View project details">View Details</a>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -105,6 +106,11 @@ function logClicks(x,y) {
 $(document).click(function(loc) {
   logClicks(loc.pageX, loc.pageY);
 });
+
+// Function to initialize Bootstrap tooltips
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 
 
