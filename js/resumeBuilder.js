@@ -30,7 +30,7 @@ var work = {
 			"title" : "Instuctor",
 			"location" : "Mountain View, CA",
 			"dates" : "September, 2014 - December, 2014",
-			"description" : "<p>Provided instruction to students at a Full-stack Web Development bootcamp</p>"
+			"description" : "<ul><li>Provided instruction to students at a Full-stack Web Development bootcamp<\/li><li>Gave daily lectures on technologies such as HTML, CSS, PHP, MySQL, JQuery, AJAX, Codeigniter and more.<\/li><li>Worked one-on-one with students to provide assistance with coding and debugging.<\/li><\/ul>"
 		},
 		{
 			"employer" : "Excite@Home",

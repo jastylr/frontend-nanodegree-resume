@@ -341,10 +341,12 @@ h1#name + span {
     margin-top: 10%;
   }
   #topContacts,
-  #footerContacts,
-  #skills {
+  #footerContacts {
     display: block;
     text-align: center;
+  }
+  #skills {
+    display: none;
   }
   #bio-details {
     text-align: center;
@@ -369,9 +371,20 @@ h1#name + span {
     text-align: center;
   }
 
-  .work-entry li {
+  .work-entry li,
+  .work-entry p {
     font-size: 1.2em;
+  }
+
+  .work-entry li {
     padding: .3em 0;
+  }
+
+  .date-text,
+  .location-text {
+    float: none;
+    font-size: 1.1em;
+    line-height: 1.4em;
   }
   
   .project-entry:nth-child(4n+2) {
