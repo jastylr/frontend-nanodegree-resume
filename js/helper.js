@@ -24,7 +24,7 @@ var HTMLlinkedIn = '<li class="flex-item"><span class="orange-text">linkedin</sp
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
-var HTMLbioPic = '<div class="col-md-2 col-sm-3"><img src="%data%" class="biopic"></div>';
+var HTMLbioPic = '<div class="col-md-2 col-sm-3 biopic"><img src="%data%"></div>';
 var HTMLwelcomeMsg = '<div class="col-md-10 col-sm-9"><span class="welcome-message">%data%</span></div>';
 
 var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';

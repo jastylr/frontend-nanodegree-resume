@@ -164,11 +164,18 @@ ul {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  border-radius: 50%;
   border: 6px solid #fff;
   padding: 0;
   width: 200px;
   margin-bottom: 20px;
+}
+
+.biopic img {                
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
 }
 
 img {
@@ -206,10 +213,6 @@ span {
 }
 hr {
   margin: 0 !important;
-}
-
-#header img {                
-  
 }
 
 .welcome-message p {
@@ -366,6 +369,9 @@ h1#name + span {
   }
   h1#name + span {
     font-size: 1.2em;
+  }
+  .biopic {
+    margin: 10px auto 20px auto;
   }
   .welcome-message p {
     font-size: 1.0em;
