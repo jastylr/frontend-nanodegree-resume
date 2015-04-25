@@ -163,7 +163,7 @@ ul {
   /*float: left;*/
   padding: 10px;
   width: 200px;
-  /*display: none;*/
+  margin-bottom: 20px;
 }
 
 img {
@@ -345,7 +345,8 @@ h1#name + span {
   #topContacts,
   #footerContacts,
   #skills {
-    justify-content:center;
+    display: block;
+    text-align: center;
   }
   #bio-details {
     text-align: center;
@@ -367,6 +368,7 @@ h1#name + span {
   }
   .welcome-message p {
     font-size: 1.0em;
+    text-align: center;
   }
   
   .project-entry:nth-child(4n+2) {
@@ -385,7 +387,6 @@ h1#name + span {
 @media only screen and (max-width: 400px) {
   .biopic {
     width: 135px;
-    margin-bottom: 20px;
   }
   #topContacts.flex-box,
   #footerContacts.flex-box {
