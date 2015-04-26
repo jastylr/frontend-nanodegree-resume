@@ -293,6 +293,11 @@ h1#name + span {
   color: #fff;
 }
 
+#topContacts span, 
+#footerContacts span {
+  padding: 5px;
+}
+
 .project-entry {
   margin-bottom: 25px;
   padding: 10px;
