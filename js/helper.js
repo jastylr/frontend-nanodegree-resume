@@ -63,9 +63,9 @@ var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div class="col-md-12"><div id="map"></div></div>';
 
 // Added new Project Detail template
-var HTMLprojectDetailStart = '<div id="%id" class="project-detail"><div class="inner flex-box"></div></div>';
+var HTMLprojectDetailStart = '<div id="%id" class="project-detail"><div class="inner"></div></div>';
 var HTMLprojectDetailURL = '<a href="%data%" target="_blank">%data%</a>';
-var HTMLprojectDetailImage = '<img src="%data%" alt="%name%" class="project-image flex-item">';
+var HTMLprojectDetailImage = '<div class="project-image"><img src="%data%" alt="%name%"></div>';
 var HTMLprojectDetailDesc = '<div class="project-desc flex-item"><h2>%name%</h2><div class="project-url"></div><p>%data%</p><h4>Technologies used:</h4><ul class="project-tech"></ul></div>';
 var HTMLprojectDetailTech = '<li class="orange-text">%data%</li>';
 
@@ -74,10 +74,10 @@ var HTMLprojectDetailTech = '<li class="orange-text">%data%</li>';
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
 $(document).ready(function() {
-  $('button').click(function() {
-    var iName = inName() || function(){};
-    $('#name').html(iName);  
-  });
+  // $('button').click(function() {
+  //   var iName = inName() || function(){};
+  //   $('#name').html(iName);  
+  // });
 
   $(".project-entry").delegate("img", "mouseover mouseout", function(e) {
       if (e.type == 'mouseover') {

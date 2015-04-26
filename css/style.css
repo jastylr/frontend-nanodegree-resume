@@ -8,6 +8,10 @@ html, body {
   height: 100%;
 }
 
+body {
+  padding-top: 60px;
+}
+
 .clearfix {
   overflow: auto;
 }
@@ -61,6 +65,35 @@ img {
   height: auto;
 }
 
+.navbar {
+  margin-bottom: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.nav.container-fluid {
+  background-color: #222;
+}
+
+.navbar-inverse {
+  background-color: #222;
+  border-color: transparent;
+}
+
+.navbar-brand {
+  display: none;
+}
+
+.navbar-nav {
+  float:none;
+  margin: 0 auto;
+  display: table;
+  table-layout: fixed;
+}
+
+.navbar-nav > li > a {
+  font-size: 1.2em;
+}
 
 .date-text {
   font-style: italic;
@@ -196,7 +229,7 @@ img {
 }
 
 span {
-  padding: 5px;
+  /*padding: 5px;*/
 }
 
 #letsConnect {
@@ -275,14 +308,22 @@ h1#name + span {
   display: none;
 }
 
+.project-detail .inner {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .project-image {
   height: 100%;
-  width: 60%;
   max-width: 600px;
+  width: 50%;
 }
 
 .project-desc {
-  width: 40%;
+  padding: 10px;
+  width: 400px;
 }
 
 .details-btn {

@@ -102,12 +102,12 @@
 			{
 				"title": "Faultline Media Solutions",
 				"dates": "2014",
-				"description": "This is my personal website",
+				"description": "This is my personal website portfolio that I use for freelance work.",
 				"images": ["images/projects/thumb/faultlinemedia-d.jpg"],
 				"details" : {
 					"url": "http://www.faultlinemedia.com",
 					"image" : "images/projects/large/faultlinemedia.jpg",
-					"description" : "This is my personal business website.",
+					"description" : "<p>I created this site in order to have an online presence for my freelance design work. It is a single page design which uses Bootstrap as well as some JQuery to add some effects to the various project images.<\/p><p><\/p>",
 					"technologies": ["HTML", "CSS", "JQuery", "Bootstrap"]
 				}
 			},
@@ -496,10 +496,7 @@
 	// Vanilla JS way to listen for resizing of the window
 	// and adjust map bounds
 	window.addEventListener('resize', function(e) {
-	  // var h = $(window).height(),
-	  //       offsetTop = 320; // Calculate the top offset
-
-	  //   $('#map').css('height', (h - offsetTop));
+	  
 	  //Make sure the map bounds get updated on page resize
 	  map.fitBounds(mapBounds);
 	});
