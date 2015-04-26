@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 .clearfix {
@@ -410,6 +410,12 @@ h1#name + span {
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar-nav {
+    float:none;
+    margin: 0;
+    display: table;
+    table-layout: fixed;
+  }
   #letsConnect {
     margin-top: 10%;
   }

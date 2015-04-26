@@ -207,6 +207,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         filter: ':not(.external)',
 
     });
+
+    // Fix to close Bootstrap mobile toggle menu when clicking a link in fixed navbar
+    $(document).on('click','.navbar-collapse.in',function(e) {
+      if( $(e.target).is('a') && ( $(e.target).attr('class') != 'dropdown-toggle' ) ) {
+          $(this).collapse('hide');
+      }
+    });
   </script>
 </body>
 </html>
