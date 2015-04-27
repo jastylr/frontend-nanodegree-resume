@@ -14,7 +14,31 @@
 		},
 		"welcomeMessage": "<p>Hello! My name is Jason Taylor and I am a web developer living and working in the San Francisco Bay Area. I enjoy creating engaging projects which require using both the left and right sides of my brain to create a visually appealing yet functional experience.<\/p><p>Feel free to peruse my resume and contact me for any open positions if you like what you see. Thanks for stopping by!<\/p>",
 		"skills": ["HTML", "CSS", "Javascript", "JQuery", "AJAX", "Responsive design", "Photoshop"],
-		"biopic": "images/jason-taylor.jpg"
+		"biopic": "images/jason-taylor.jpg",
+		"display" : function() {
+			// Display name, role, picture and welcome message
+			$('#bio-name').append(HTMLheaderName.replace('%data%', bio.name));
+			$('#bio-name').append(HTMLheaderRole.replace('%data%', bio.role));
+			$('#bio-details').append(HTMLbioPic.replace('%data%', bio.biopic));
+			$('#bio-details').append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage));
+
+			// Display contact information on both the top and bottom of the page
+			var bioMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
+			var bioEmail = HTMLemail.replace('%data%', bio.contacts.email);
+			var bioGithub = HTMLgithub.replace('%data%', makeLink(bio.contacts.github));
+			var bioLinkedIn = HTMLlinkedIn.replace('%data%', makeLink(bio.contacts.linkedin));
+			var bioLocation = HTMLlocation.replace('%data%', bio.contacts.location);
+			var formattedContacts = bioMobile + bioEmail + bioGithub + bioLinkedIn + bioLocation;
+			$('#topContacts, #footerContacts').append(formattedContacts);
+
+			// Check if the skills array is empty or not and if not, output the skills
+			if (bio.skills.length > 0) {
+				$('#skillset').append(HTMLskillsStart);
+				for(skill in bio.skills) {
+					$('#skills').append(HTMLskills.replace('%data%', bio.skills[skill]));
+				}
+			}
+		}
 	};
 
 	// Education JSON object
@@ -52,7 +76,39 @@
 				"date": 2015,
 				"url" : "https://www.udacity.com/course/nd001"
 			}
-		]
+		],
+		"display" : function() {
+			$('#education').append(HTMLschoolStart);
+			for (school in education.schools) {
+				var formattedName = HTMLschoolName.replace('%data%', education.schools[school].name);
+				var formattedDegree = HTMLschoolDegree.replace('%data%', education.schools[school].degree);
+				$('.education-entry:last').append(formattedName + formattedDegree);
+				$('.education-entry:last').append(HTMLschoolDates.replace('%data%', education.schools[school].dates));
+				$('.education-entry:last').append(HTMLschoolLocation.replace('%data%', education.schools[school].location));
+
+				// Loop through the majors array
+				if (education.schools[school].majors.length > 0) {
+					for (major in education.schools[school].majors) {
+						if (education.schools[school].majors[major] > 0) {
+							$('.education-entry:last').append(HTMLschoolMajor.replace('%data%', education.schools[school].majors[major]));
+						}
+					}
+				}
+			}
+
+			// Display any online courses
+			for (course in education.onlineCourses) {
+				$('.education-entry:last').append(HTMLonlineClasses);
+				var onlineTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[course].title );
+				
+				// Added URL into the title link rather than as a separate link
+				onlineTitle = onlineTitle.replace('%url%', education.onlineCourses[course].url);
+				var onlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[course].school);
+				$('.education-entry:last').append(onlineTitle + onlineSchool);
+
+				$('.education-entry:last').append(HTMLonlineDates.replace('%data%', education.onlineCourses[course].date));
+			}
+		}
 	};
 
 	// Work JSON object
@@ -93,7 +149,23 @@
 				"dates" : "1993 - 1995",
 				"description" : "<ul><li>Responsible for the design, implementation and debugging of various software modules comprising a large-scale Windows 3.x network management application written in C++ and the Microsoft Foundation Classes.<\/li><li>Utilized graphical skills to create computer images used in the development of the current Windows 3.x management application.<\/li><li>Created a graphical software application (Test System 2000) that worked in conjunction with specific hardware modules to provide T1 test set functionality. The application later received the 1995 International Communications Association (ICA) Award for Innovative Product of the Year.<\/li><\/ul>"
 			}
-		]
+		],
+		"display" : function() {
+			// Loop through each job in the jobs object and display the output
+			for (job in work.jobs) {
+				$('#workExperience').append(HTMLworkStart);
+
+				var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
+				var formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
+				var formatedEmployerTitle = formattedEmployer + formattedTitle;
+
+				$('.work-entry:last').append(formatedEmployerTitle);
+				$('.work-entry:last').append(HTMLworkDateLocStart);
+				$('.work-entry:last .date-location').append(HTMLworkDates.replace('%data%', work.jobs[job].dates));
+				$('.work-entry:last .date-location').append(HTMLworkLocation.replace('%data%', work.jobs[job].location));
+				$('.work-entry:last').append(HTMLworkDescription.replace('%data%', work.jobs[job].description));
+			}
+		}
 	};
 
 	// Projects JSON object - added URL and Technologies properties not in specification
@@ -207,153 +279,73 @@
 					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Drupal", "Photoshop"]
 				}
 			}
-		]
-	};
+		],
+		"display" : function() {
+			for (var project in projects.project) {
+				$('#projects .inner').append(HTMLprojectStart.replace('%id%', project));
 
-	// Display method used to output bio information to the screen
-	bio.display = function() {
-		// Display name, role, picture and welcome message
-		$('#bio-name').append(HTMLheaderName.replace('%data%', bio.name));
-		$('#bio-name').append(HTMLheaderRole.replace('%data%', bio.role));
-		$('#bio-details').append(HTMLbioPic.replace('%data%', bio.biopic));
-		$('#bio-details').append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage));
+				var projectTitle = HTMLprojectTitle.replace('%data%', projects.project[project].title);
+				projectTitle = projectTitle.replace('%id%', project);
+				$('.project-entry:last').append(projectTitle);
 
-		// Display contact information on both the top and bottom of the page
-		var bioMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
-		var bioEmail = HTMLemail.replace('%data%', bio.contacts.email);
-		var bioGithub = HTMLgithub.replace('%data%', makeLink(bio.contacts.github));
-		var bioLinkedIn = HTMLlinkedIn.replace('%data%', makeLink(bio.contacts.linkedin));
-		var bioLocation = HTMLlocation.replace('%data%', bio.contacts.location);
-		var formattedContacts = bioMobile + bioEmail + bioGithub + bioLinkedIn + bioLocation;
-		$('#topContacts, #footerContacts').append(formattedContacts);
+				var projectDate = HTMLprojectDates.replace('%data%', projects.project[project].dates);
+				$('.project-entry:last').append(projectDate);
 
-		// Check if the skills array is empty or not and if not, output the skills
-		if (bio.skills.length > 0) {
-			$('#skillset').append(HTMLskillsStart);
-			for(skill in bio.skills) {
-				$('#skills').append(HTMLskills.replace('%data%', bio.skills[skill]));
-			}
-		}
-	}
+				var projectDesc = HTMLprojectDescription.replace('%data%', projects.project[project].description);
+				$('.project-entry:last').append(projectDesc);
 
-	// Display method for Projects
-	projects.display = function() {
-		for (var project in projects.project) {
-			$('#projects .inner').append(HTMLprojectStart.replace('%id%', project));
-
-			var projectTitle = HTMLprojectTitle.replace('%data%', projects.project[project].title);
-			projectTitle = projectTitle.replace('%id%', project);
-			$('.project-entry:last').append(projectTitle);
-
-			var projectDate = HTMLprojectDates.replace('%data%', projects.project[project].dates);
-			$('.project-entry:last').append(projectDate);
-
-			var projectDesc = HTMLprojectDescription.replace('%data%', projects.project[project].description);
-			$('.project-entry:last').append(projectDesc);
-
-			$('.project-entry:last').append(HTMLprojectImagesStart);
-			
-			// Loop through array of images
-			if (projects.project[project].images.length > 0) {
-				for (image in projects.project[project].images) {
-					var image = HTMLprojectImage.replace('%data%', projects.project[project].images[image]);
-					image = image.replace('%id%', project);
-					$('.project-entry:last .fadein:last').append(image);
+				$('.project-entry:last').append(HTMLprojectImagesStart);
+				
+				// Loop through array of images
+				if (projects.project[project].images.length > 0) {
+					for (image in projects.project[project].images) {
+						var image = HTMLprojectImage.replace('%data%', projects.project[project].images[image]);
+						image = image.replace('%id%', project);
+						$('.project-entry:last .fadein:last').append(image);
+					}
 				}
-			}
 
-			// Create 2 buttons, one to view details of the project and one to launch the live project
-			var projectView = HTMLprojectView.replace('%data%', project);
-			$('.project-entry:last').append(projectView);
+				// Create 2 buttons, one to view details of the project and one to launch the live project
+				var projectView = HTMLprojectView.replace('%data%', project);
+				$('.project-entry:last').append(projectView);
 
-			// Only display the "Launch Site" button if there is a live site to view
-			if (projects.project[project].details.url.length > 0) {
-				var projectURL = HTMLprojectURL.replace('%data%', projects.project[project].details.url);
-				projectURL = projectURL.replace('%title%', projects.project[project].title)
-				$('.project-entry:last').append(projectURL);
-			}
-
-			// Build the project details section. This section is hidden on the page with CSS and
-			// is displayed within a lightbox when the project title, image or view details button
-			// are clicked
-			$('#project-details').append(HTMLprojectDetailStart.replace('%id', 'detail-' + project));
-			
-			// Get the image that will be displayed on the details page
-			var detailImage = HTMLprojectDetailImage.replace('%data%', projects.project[project].details.image);
-			detailImage = detailImage.replace('%name%', projects.project[project].title);
-			$('.project-detail .inner:last').append(detailImage);
-
-			// Get the detailed project description
-			var detailDesc = HTMLprojectDetailDesc.replace('%name%', projects.project[project].title);
-			detailDesc = detailDesc.replace('%data%', projects.project[project].details.description);
-			$('.project-detail .inner:last').append(detailDesc);
-
-			// Get the URL of the live project if one exists
-			if (projects.project[project].details.url.length > 0) {
-				projectURL = HTMLprojectDetailURL.replace(/%data%/g, projects.project[project].details.url);
-				$('.project-url:last').append(projectURL);
-			}
-
-			// Loop through and create a list of the technologies used on this project
-			if (projects.project[project].details.technologies.length > 0) {
-				for (technology in projects.project[project].details.technologies) {
-					$('.project-tech:last').append(HTMLprojectDetailTech.replace('%data%', projects.project[project].details.technologies[technology]));
+				// Only display the "Launch Site" button if there is a live site to view
+				if (projects.project[project].details.url.length > 0) {
+					var projectURL = HTMLprojectURL.replace('%data%', projects.project[project].details.url);
+					projectURL = projectURL.replace('%title%', projects.project[project].title)
+					$('.project-entry:last').append(projectURL);
 				}
-			}
-		}
-	}
 
-	// Display method for Work Experience
-	work.display = function() {
-		// Loop through each job in the jobs object and display the output
-		for (job in work.jobs) {
-			$('#workExperience').append(HTMLworkStart);
+				// Build the project details section. This section is hidden on the page with CSS and
+				// is displayed within a lightbox when the project title, image or view details button
+				// are clicked
+				$('#project-details').append(HTMLprojectDetailStart.replace('%id', 'detail-' + project));
+				
+				// Get the image that will be displayed on the details page
+				var detailImage = HTMLprojectDetailImage.replace('%data%', projects.project[project].details.image);
+				detailImage = detailImage.replace('%name%', projects.project[project].title);
+				$('.project-detail .inner:last').append(detailImage);
 
-			var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
-			var formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
-			var formatedEmployerTitle = formattedEmployer + formattedTitle;
+				// Get the detailed project description
+				var detailDesc = HTMLprojectDetailDesc.replace('%name%', projects.project[project].title);
+				detailDesc = detailDesc.replace('%data%', projects.project[project].details.description);
+				$('.project-detail .inner:last').append(detailDesc);
 
-			$('.work-entry:last').append(formatedEmployerTitle);
-			$('.work-entry:last').append(HTMLworkDateLocStart);
-			$('.work-entry:last .date-location').append(HTMLworkDates.replace('%data%', work.jobs[job].dates));
-			$('.work-entry:last .date-location').append(HTMLworkLocation.replace('%data%', work.jobs[job].location));
-			$('.work-entry:last').append(HTMLworkDescription.replace('%data%', work.jobs[job].description));
-		}
-	}
+				// Get the URL of the live project if one exists
+				if (projects.project[project].details.url.length > 0) {
+					projectURL = HTMLprojectDetailURL.replace(/%data%/g, projects.project[project].details.url);
+					$('.project-url:last').append(projectURL);
+				}
 
-	// Display method for Education
-	education.display = function() {
-		$('#education').append(HTMLschoolStart);
-		for (school in education.schools) {
-			var formattedName = HTMLschoolName.replace('%data%', education.schools[school].name);
-			var formattedDegree = HTMLschoolDegree.replace('%data%', education.schools[school].degree);
-			$('.education-entry:last').append(formattedName + formattedDegree);
-			$('.education-entry:last').append(HTMLschoolDates.replace('%data%', education.schools[school].dates));
-			$('.education-entry:last').append(HTMLschoolLocation.replace('%data%', education.schools[school].location));
-
-			// Loop through the majors array
-			if (education.schools[school].majors.length > 0) {
-				for (major in education.schools[school].majors) {
-					if (education.schools[school].majors[major] > 0) {
-						$('.education-entry:last').append(HTMLschoolMajor.replace('%data%', education.schools[school].majors[major]));
+				// Loop through and create a list of the technologies used on this project
+				if (projects.project[project].details.technologies.length > 0) {
+					for (technology in projects.project[project].details.technologies) {
+						$('.project-tech:last').append(HTMLprojectDetailTech.replace('%data%', projects.project[project].details.technologies[technology]));
 					}
 				}
 			}
 		}
-
-		// Display any online courses
-		for (course in education.onlineCourses) {
-			$('.education-entry:last').append(HTMLonlineClasses);
-			var onlineTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[course].title );
-			
-			// Added URL into the title link rather than as a separate link
-			onlineTitle = onlineTitle.replace('%url%', education.onlineCourses[course].url);
-			var onlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[course].school);
-			$('.education-entry:last').append(onlineTitle + onlineSchool);
-
-			$('.education-entry:last').append(HTMLonlineDates.replace('%data%', education.onlineCourses[course].date));
-		}
-	}
+	};
 
 	// Simple function to append Google Map to map div
 	function displayMap() {
@@ -545,6 +537,7 @@
 	projects.display();
 	education.display();
 	displayMap();
+
 
 })(jQuery);
 
