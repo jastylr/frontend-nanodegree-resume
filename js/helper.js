@@ -38,10 +38,11 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '%data%';
 
-var HTMLprojectStart = '<div class="project-entry col-md-4 col-sm-6 clearfix"></div>';
+var HTMLprojectStart = '<div id="project-%id%" class="project-entry col-md-4 col-sm-6 clearfix"></div>';
 var HTMLprojectTitle = '<a class="project-title" href="#" data-featherlight="#detail-%id%">%data%</a>'; //<a href="#">%data%</a>
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p class="project-description"><br>%data%</p>';
+var HTMLprojectImagesStart = '<div class="fadein"></div>';
 var HTMLprojectImage = '<a href="#" data-featherlight="#detail-%id%"><img src="%data%"></a>'; //<img src="%data%">';
 var HTMLprojectURL = '<a class="url-btn btn btn-info" href="%data%" target="_blank" data-toggle="tooltip" data-placement="top" title="Launch %title%">Launch Site</a>';
 var HTMLprojectView = '<a class="details-btn btn btn-info" href="#" data-featherlight="#detail-%data%" data-toggle="tooltip" data-placement="top" title="View project details">View Details</a>';
@@ -69,23 +70,23 @@ var HTMLprojectDetailImage = '<div class="project-image"><img src="%data%" alt="
 var HTMLprojectDetailDesc = '<div class="project-desc flex-item"><h2>%name%</h2><div class="project-url"></div><p>%data%</p><h4>Technologies used:</h4><ul class="project-tech"></ul></div>';
 var HTMLprojectDetailTech = '<li class="orange-text">%data%</li>';
 
-
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
 $(document).ready(function() {
-  // $('button').click(function() {
-  //   var iName = inName() || function(){};
-  //   $('#name').html(iName);  
-  // });
+  $('button.intButton').click(function() {
+    var iName = inName() || function(){};
+    $('#name').html(iName);  
+  });
 
+  // Code to change the opacity of all project images except the currently hovered one
   $(".project-entry").delegate("img", "mouseover mouseout", function(e) {
-      if (e.type == 'mouseover') {
-        jQuery(".project-entry img").not(this).dequeue().animate({opacity: "0.3"}, 300);
-      } else {
-        jQuery(".project-entry img").not(this).dequeue().animate({opacity: "1"}, 300);
-      }
-    });
+    if (e.type == 'mouseover') {
+      jQuery(".project-entry img").not(this).dequeue().animate({opacity: "0.3"}, 300);
+    } else {
+      jQuery(".project-entry img").not(this).dequeue().animate({opacity: "1"}, 300);
+    }
+  });
 });
 
 /*

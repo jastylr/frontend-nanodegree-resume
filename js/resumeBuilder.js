@@ -203,7 +203,7 @@
 	// Display method for Projects
 	projects.display = function() {
 		for (var project in projects.project) {
-			$('#projects .inner').append(HTMLprojectStart);
+			$('#projects .inner').append(HTMLprojectStart.replace('%id%', project));
 
 			var projectTitle = HTMLprojectTitle.replace('%data%', projects.project[project].title);
 			projectTitle = projectTitle.replace('%id%', project);
@@ -215,12 +215,14 @@
 			var projectDesc = HTMLprojectDescription.replace('%data%', projects.project[project].description);
 			$('.project-entry:last').append(projectDesc);
 
+			$('.project-entry:last').append(HTMLprojectImagesStart);
+			
 			// Loop through array of images
 			if (projects.project[project].images.length > 0) {
 				for (image in projects.project[project].images) {
 					var image = HTMLprojectImage.replace('%data%', projects.project[project].images[image]);
 					image = image.replace('%id%', project);
-					$('.project-entry:last').append(image);
+					$('.project-entry:last .fadein:last').append(image);
 				}
 			}
 
@@ -427,7 +429,7 @@
 
 	    // hmmmm, I wonder what this is about...
 	    google.maps.event.addListener(marker, 'click', function() {
-	      // your code goes here!
+	      infoWindow.open(map,marker);
 	    });
 
 	    // this is where the pin actually gets added to the map.
