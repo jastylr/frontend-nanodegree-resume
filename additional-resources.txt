@@ -1,0 +1,20 @@
+
+
+Moved Google Maps code from helper.js to resumeBuilder.js and wrapped entire code in Javascript Immediately Invoked Function Expression so not to pollute the global scope with all the project variables. The Google Maps code directly accesses some of the objects in resumeBuilder.js hence the reason for moving them together. I'm sure this could have been avoid by using a modular design but I have not learned that yet with Javascript.
+
+
+resumeBuilder.js
+	- Added LinkedIn to bio JSON object
+
+	- Added details property to projects JSON to provde additional project details that will be displayed in a 
+		lightbox including the project title, large project image, live site URL if one exists, detailed description
+		of the project and the technologies used
+
+
+Added Bootstrap for responsive grid based layout
+
+Added Featherlight JQuery plugin to provide lightbox support
+
+Added jquery.singlePageNav plugin to provide single page navigation scrolling
+
+Added custom JQuery to change opacity of hovered projects
