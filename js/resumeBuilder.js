@@ -119,8 +119,8 @@
 				"details" : {
 					"url": "http://www.noxcusesfitness.com",
 					"image" : "images/projects/large/noxcusesfitness.jpg",
-					"description" : "This is a PHP site that was fun to build",
-					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Responsive Design"]
+					"description" : "<p>For this site, the client wanted to feel as they were at the club when landing on their home page. I used a fullscreen background with an image of the front of their fitness studio as the focal point. To keep it clean, all of the navigation is in a mobile-style dropdown so as to not clutter the screen.<\/p><p>The site also incorporates functionality from the MindBody API service which the studio uses for managing memberships and classes.<\/p> ",
+					"technologies": ["HTML", "CSS", "PHP/MySQL", "Drupal", "MindBody API", "JQuery", "Responsive Design", "Photoshop"]
 				}
 			},
 			{
@@ -131,8 +131,8 @@
 				"details" : {
 					"url": "http://www.crisisguard.com",
 					"image" : "images/projects/large/crisisguard.jpg",
-					"description" : "This is a PHP site that was fun to build",
-					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Responsive Design"]
+					"description" : "<p>This was a website redesign project and boy did it need it! I tried to come up with a design that was clean and colorful without going too far. I used subtle hints of the site's logo in various places in the design when I was creating the graphics.<\/p><p>The site uses PHP Smarty Templates and has a smattering of JQuery to provide a product slideshow as well as scrolling testimonials.<\/p>",
+					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Responsive Design", "Photoshop"]
 				}
 			},
 			{
@@ -143,8 +143,8 @@
 				"details" : {
 					"url": "http://www.mariettechocolates.com",
 					"image" : "images/projects/large/mariettechocolates.jpg",
-					"description" : "This is a PHP site that was fun to build",
-					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Responsive Design", "Drupal"]
+					"description" : "<p>This is a PHP e-commerce website for a local Chocolate shop. The client wanted the ability to sell their chocolates online and wanted to draw customers in with images of their wares.<\/p><p>I started by creating a fullscreen, responsive slideshow with image overlays to showcase some of the many fine chocolates. On the Chocolates page, each item is displayed with the ability to filter results by the category of chocolates available.<\/p><p>It was difficult to design this site without wanting to indulge in some the great looking candies!<\/p>",
+					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Responsive Design", "Drupal", "Photoshop"]
 				}
 			},
 			{
@@ -155,8 +155,8 @@
 				"details" : {
 					"url": "http://www.christianokoye.com",
 					"image" : "images/projects/large/christianokoye.jpg",
-					"description" : "This is a PHP site that was fun to build",
-					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Drupal"]
+					"description" : "<p>Christian Okoye, ex-NFL running back for the Kansas City Chiefs, contacted me to create a site for his foundation. It's an e-commerce site that allows user to purchase some memorabillia as well as tickets to the annual Ontario Mills 5k/10k Run which Christian hosts.<\/p><p>For ticket purchasing, I came up with a method for allowing a user to fill out information for multiple participants using AJAX and then adding all those users to the cart at one time before proceeding to checkout.<\/p>",
+					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Drupal", "Photoshop"]
 				}
 			},
 			{
@@ -167,8 +167,44 @@
 				"details" : {
 					"url": "http://www.soulpilates.com",
 					"image" : "images/projects/large/soulpilates.jpg",
-					"description" : "This is a PHP site that was fun to build",
-					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "MindBody API", "Drupal"]
+					"description" : "<p>The owner of Soul Pilates wanted a design that had somewhat of a French Polynesian feel to it so I went to work in Photoshop to see what I could come up with. I used some textures of bamboo, ornate wood and thatch and of course water and tropical flowers.<\/p><p>The site incorporates some custom PHP code to interface with the MindBody API service which is used to display a daily schedule of classes and allow visitors to sign up for them. When the client updates any of the class schedule information in her MindBody account, the results are picked up automatically on the site.<\/p>",
+					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "MindBody API", "Drupal", "Photoshop"]
+				}
+			},
+			{
+				"title": "California Sports Hall of Fame",
+				"dates": "2013",
+				"description": "Responsive website showcasing California sports inductees",
+				"images": ["images/projects/thumb/californiasportshalloffame-d.jpg"],
+				"details" : {
+					"url": "http://www.californiasportshalloffame.org",
+					"image" : "images/projects/large/californiasportshalloffame.jpg",
+					"description" : "<p>Another site for ex-NFLer, Christian Okoye who put together and runs the California Sports Hall of Fame. This site showcases it's inductees and provides biographies, video montages and image galleries from past and present events.<\/p><p>The site is a responsive design and also provides e-commerce functionality.<\/p>",
+					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Photoshop"]
+				}
+			},
+			{
+				"title": "L'Escape Spa",
+				"dates": "2013",
+				"description": "An e-commerce website design for a local spa/salon",
+				"images": ["images/projects/thumb/lescapespa-d.jpg"],
+				"details" : {
+					"url": "http://www.lescapespa.com",
+					"image" : "images/projects/large/lescapespa.jpg",
+					"description" : "<p>For this design, the client wanted a simple e-commerce site that used some subtle, ornate touches hence I used some textures and borders around various elements on the page.<\/p><p>The site was built using Drupal with e-commerce functionality provided by the Ubercart module.<\/p>",
+					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Drupal", "Photoshop"]
+				}
+			},
+			{
+				"title": "Piazzas Fine Foods",
+				"dates": "2012",
+				"description": "A website design for a local supermarket chain",
+				"images": ["images/projects/thumb/piazzasfinefoods-d.jpg"],
+				"details" : {
+					"url": "http://www.piazzasfinefoods.com",
+					"image" : "images/projects/large/piazzasfinefoods.jpg",
+					"description" : "<p>This is a simple website design that I created for a local supermarket. I tried to use an eco-friendly color scheme to go along with the client's brand.<\/p><p>The site connects with the client's Constant Contact account to allow users to sign up for their newsletter and weekly specials.<\/p>",
+					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Drupal", "Photoshop"]
 				}
 			}
 		]
