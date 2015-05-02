@@ -177,11 +177,13 @@ a {
 
 .flex-box {
   display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding: 10px;
 }
 
@@ -280,6 +282,7 @@ h1#name + span {
 #topContacts,
 #footerContacts,
 #skills {
+  -webkit-justify-content: space-around;
   justify-content:space-around;
 }
 
@@ -321,6 +324,7 @@ h1#name + span {
   display: -webkit-flex;
   display: -moz-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -393,6 +397,7 @@ h1#name + span {
     margin-top: 5%;
   }
   #topContacts, #footerContacts, #skills {
+    -webkit-justify-content: flex-start;
     justify-content: flex-start;
   }
 }
