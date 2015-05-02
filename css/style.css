@@ -393,7 +393,7 @@ h1#name + span {
     margin-top: 5%;
   }
   #topContacts, #footerContacts, #skills {
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 }
 
