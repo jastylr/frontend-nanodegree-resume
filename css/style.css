@@ -210,7 +210,8 @@ ul {
   margin-bottom: 20px;
 }
 
-.biopic img {                
+.biopic img {    
+  padding: 7px;            
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
