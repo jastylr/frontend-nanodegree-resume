@@ -14,7 +14,7 @@
 		},
 		"welcomeMessage": "<p>Hello! My name is Jason Taylor and I am a web developer living and working in the San Francisco Bay Area. I enjoy creating engaging projects which require using both the left and right sides of my brain to create a visually appealing yet functional experience.<\/p><p>Feel free to peruse my resume and contact me for any open positions if you like what you see. Thanks for stopping by!<\/p>",
 		"skills": ["HTML", "CSS", "Javascript", "JQuery", "AJAX", "Responsive design", "Photoshop"],
-		"biopic": "images/jason-taylor.jpg",
+		"biopic": "images/jason-taylor-02.jpg",
 		"display" : function() {
 			// Display name, role, picture and welcome message
 			$('#bio-name').append(HTMLheaderName.replace('%data%', bio.name));
@@ -171,6 +171,18 @@
 	// Projects JSON object - added URL and Technologies properties not in specification
 	var projects = {
 		"project" : [
+			{
+				"title": "NanoFrogger",
+				"dates": "2015",
+				"description": "A JavaScript/HTML5 Canvas Game.",
+				"images": ["images/projects/thumb/nanofrogger-d.jpg"],
+				"details" : {
+					"url": "http://jastylr.github.io/frontend-nanodegree-arcade-game/",
+					"image" : "images/projects/large/nanofrogger.jpg",
+					"description" : "<p>This was a project for the Udacity Front-end Web Developer Nanodegree program. It is a take on the classic Frogger arcade game and uses Javascript and the HTML5 Canvas. This was a fun game to work and play!<\/p><p><\/p>",
+					"technologies": ["Javascript", "HTML", "CSS"]
+				}
+			},
 			{
 				"title": "Faultline Media Solutions",
 				"dates": "2014",
