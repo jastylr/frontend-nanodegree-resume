@@ -499,7 +499,7 @@ h1#name + span {
 
 @media only screen and (max-width: 400px) {
   .biopic {
-    width: 135px;
+    width: 155px;
   }
   #topContacts.flex-box,
   #footerContacts.flex-box {
