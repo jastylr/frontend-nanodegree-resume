@@ -179,7 +179,19 @@
 				"details" : {
 					"url": "http://jastylr.github.io/frontend-nanodegree-arcade-game/",
 					"image" : "images/projects/large/nanofrogger.jpg",
-					"description" : "<p>This was a project for the Udacity Front-end Web Developer Nanodegree program. It is a take on the classic Frogger arcade game and uses Javascript and the HTML5 Canvas. This was a fun game to work and play!<\/p><p><\/p>",
+					"description" : "<p>This was another project for the Udacity Front-end Web Developer Nanodegree program. It is a take on the classic Frogger arcade game and uses Javascript and the HTML5 Canvas. This was a fun game to work and play!<\/p><p><\/p>",
+					"technologies": ["Javascript", "HTML", "CSS"]
+				}
+			},
+			{
+				"title": "Online Resume",
+				"dates": "2015",
+				"description": "My JavaScript Resume.",
+				"images": ["images/projects/thumb/jasontaylor-d.jpg"],
+				"details" : {
+					"url": "http://jastylr.github.io",
+					"image" : "images/projects/large/jasontaylor.jpg",
+					"description" : "<p>This was a project for the Udacity Front-end Web Developer Nanodegree program. The project involved creating an online resume that utilizes Javascript to handle all the data and display functionality. I added in some Bootstrap to make the site responsive along with some JQuery effects like smooth scrolling menu navigation, lightboxes and image hover effects. <\/p><p>I ended up liking the outcome so I decided to use this as my main resume and portfolio.<\/p>",
 					"technologies": ["Javascript", "HTML", "CSS"]
 				}
 			},
