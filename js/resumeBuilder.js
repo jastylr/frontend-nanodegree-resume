@@ -14,7 +14,7 @@
 		},
 		"welcomeMessage": "<p>Hello! My name is Jason Taylor and I am a web developer living and working in the San Francisco Bay Area. I enjoy creating engaging projects which require using both the left and right sides of my brain to create a visually appealing yet functional experience.<\/p><p>Feel free to peruse my resume and contact me for any open positions if you like what you see. Thanks for stopping by!<\/p>",
 		"skills": ["HTML", "CSS", "Javascript", "JQuery", "AJAX", "Responsive design", "Photoshop"],
-		"biopic": "images/jason-taylor-03.jpg",
+		"biopic": "images/jason-taylor.jpg",
 		"display" : function() {
 			// Display name, role, picture and welcome message
 			$('#bio-name').append(HTMLheaderName.replace('%data%', bio.name));
