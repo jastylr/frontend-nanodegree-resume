@@ -12,7 +12,7 @@
 			"linkedin" : "https://www.linkedin.com/in/jasonetaylor1",
 			"location" : "Redwood City, CA"
 		},
-		"welcomeMessage": "<p>Hello! My name is Jason Taylor and I am a web developer living and working in the San Francisco Bay Area. I enjoy creating engaging projects which require using both the left and right sides of my brain to create a visually appealing yet functional experience.<\/p><p>Feel free to peruse my resume and contact me for any open positions if you like what you see. Thanks for stopping by!<\/p>",
+		"welcomeMessage": "<p>Hello! My name is Jason Taylor and I am a web developer living and working in the San Francisco Bay Area. I love creating engaging web projects which allow me to use both the left and right sides of my brain to create a visually appealing yet highly functional end-user experience.<\/p><p>Feel free to peruse my resume and contact me if you like what you see. Thanks for stopping by!<\/p>",
 		"skills": ["HTML", "CSS", "Javascript", "JQuery", "AJAX", "Responsive design", "Photoshop"],
 		"biopic": "images/jason-taylor.jpg",
 		"display" : function() {
@@ -301,6 +301,18 @@
 					"image" : "images/projects/large/piazzasfinefoods.jpg",
 					"description" : "<p>This is a simple website design that I created for a local supermarket. I tried to use an eco-friendly color scheme to go along with the client's brand.<\/p><p>The site connects with the client's Constant Contact account to allow users to sign up for their newsletter and weekly specials.<\/p>",
 					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Drupal", "Photoshop"]
+				}
+			},
+			{
+				"title": "Priority 1",
+				"dates": "2014",
+				"description": "A Drupal site for a public safety equipment company",
+				"images": ["images/projects/thumb/priority1pse-d.jpg"],
+				"details" : {
+					"url": "http://www.priority1pse.com",
+					"image" : "images/projects/large/priority1pse.jpg",
+					"description" : "<p>For this design, the client wanted an informational site that matched their existing branding. Originally I had also implemented an e-commerce store but the owner decided to remove that functionality after deciding to no longer sell items.<\/p><p>One thing that the site owner really wanted was to have a some images of police cars that they work on and somehow make them flash sirens. I went to work in Photoshop and Flash and came up with a pretty cool looking intro.<\/p>",
+					"technologies": ["HTML", "CSS", "PHP/MySQL", "Drupal", "Flash", "Photoshop"]
 				}
 			}
 		],

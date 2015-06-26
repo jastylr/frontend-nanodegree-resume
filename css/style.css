@@ -391,8 +391,16 @@ h1#name + span {
 }
 
 .work-entry li {
-    padding: .2em 0;
-  }
+  padding: .2em 0;
+}
+
+.featherlight .featherlight-content {
+  padding: 25px 25px 0;
+  border-bottom: 25px solid transparent;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-width: 92%;
+}
 
 @media only screen and (max-width: 1200px) {
   #letsConnect {
@@ -484,6 +492,12 @@ h1#name + span {
     float: none;
     font-size: 1.1em;
     line-height: 1.4em;
+  }
+
+  .project-image {
+    height: 100%;
+    max-width: 600px;
+    width: 100%;
   }
   
   .project-entry:nth-child(4n+2) {
