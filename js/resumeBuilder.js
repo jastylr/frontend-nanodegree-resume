@@ -13,7 +13,7 @@
 			"location" : "Redwood City, CA"
 		},
 		"welcomeMessage": "<p>Hello! My name is Jason Taylor and I am a web developer living and working in the San Francisco Bay Area. I love creating engaging web projects which allow me to use both the left and right sides of my brain to create a visually appealing yet highly functional end-user experience.<\/p><p>Feel free to peruse my resume and contact me if you like what you see. Thanks for stopping by!<\/p>",
-		"skills": ["HTML", "CSS", "Javascript", "JQuery", "AJAX", "Responsive design", "Photoshop"],
+		"skills": ["HTML", "CSS", "Javascript", "JQuery", "PHP", "MySQL", "AJAX", "Responsive design"],
 		"biopic": "images/jason-taylor.jpg",
 		"display" : function() {
 			// Display name, role, picture and welcome message
@@ -126,7 +126,7 @@
 				"title" : "Instuctor",
 				"location" : "Mountain View, CA",
 				"dates" : "September, 2014 - December, 2014",
-				"description" : "<ul><li>Provided instruction to students at a Full-stack Web Development bootcamp<\/li><li>Gave daily lectures on technologies such as HTML, CSS, PHP, MySQL, JQuery, AJAX, Codeigniter and more.<\/li><li>Worked one-on-one with students to provide assistance with coding and debugging.<\/li><\/ul>"
+				"description" : "<ul><li>Provided coding instruction to students at a Full-stack Web Development bootcamp<\/li><li>Gave daily lectures on technologies such as HTML, CSS, PHP, MySQL, JQuery, AJAX, Codeigniter and more.<\/li><li>Worked one-on-one with students to provide assistance with coding and debugging.<\/li><li>Developed new course materials as needed.<\/li><\/ul>"
 			},
 			{
 				"employer" : "Excite@Home",

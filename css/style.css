@@ -406,9 +406,14 @@ h1#name + span {
   #letsConnect {
     margin-top: 5%;
   }
-  #topContacts, #footerContacts, #skills {
+  #topContacts, #footerContacts {
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
+  }
+
+  #skills {
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
   }
 }
 
@@ -450,7 +455,7 @@ h1#name + span {
   }
   #skills,
   #skillsH3 {
-    display: none;
+    /*display: none;*/
   }
   #bio-details {
     text-align: center;
