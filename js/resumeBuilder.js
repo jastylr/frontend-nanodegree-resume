@@ -179,8 +179,8 @@
 				"details" : {
 					"url": "http://jastylr.github.io/frontend-nanodegree-arcade-game/",
 					"image" : "images/projects/large/nanofrogger.jpg",
-					"description" : "<p>This was another project for the Udacity Front-end Web Developer Nanodegree program. It is a take on the classic Frogger arcade game and uses Javascript and the HTML5 Canvas. This was a fun game to work and play!<\/p><p><\/p>",
-					"technologies": ["Javascript", "HTML", "CSS"]
+					"description" : "<p>This project is a take on the classic Frogger arcade game and uses Javascript and the HTML5 Canvas. It started out as a very simplistic design with basic graphics and features but I soon added to it and redesigned the complete look of the game, adding obstacles and collectibles.<\/p><p>This was a fun project to work on as well as play!<\/p>",
+					"technologies": ["Javascript OOP", "HTML", "CSS", "HTML Canvas"]
 				}
 			},
 			{
