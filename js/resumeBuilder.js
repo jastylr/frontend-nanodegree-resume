@@ -141,13 +141,6 @@
 				"location" : "San Jose, CA",
 				"dates" : "1997 - 1999",
 				"description" : "<ul><li>Responsible for porting existing Windows 3.x network management code to the Win95 platform using C++ and the Microsoft Foundation Classes.<\/li><li>Responsible for the continued development and maintenance of a large-scale network management application for Win95 with emphasis on GUI interface code.<\/li><li>Used object oriented design techniques to create several base class software modules used to provide multiple hardware module support while providing a common user interface look and feel.<\/li><li>Used SQL, ODBC and Oracle 8 Personal and Server versions to provide database support to the current NMS application.<\/li><li>Interfaced with embedded systems’ engineers to develop a common API for the management of multiple hardware modules.<\/li><\/ul>"
-			},
-			{
-				"employer" : "Verilink Corporation",
-				"title" : "Software Engineer II",
-				"location" : "San Jose, CA",
-				"dates" : "1993 - 1995",
-				"description" : "<ul><li>Responsible for the design, implementation and debugging of various software modules comprising a large-scale Windows 3.x network management application written in C++ and the Microsoft Foundation Classes.<\/li><li>Utilized graphical skills to create computer images used in the development of the current Windows 3.x management application.<\/li><li>Created a graphical software application (Test System 2000) that worked in conjunction with specific hardware modules to provide T1 test set functionality. The application later received the 1995 International Communications Association (ICA) Award for Innovative Product of the Year.<\/li><\/ul>"
 			}
 		],
 		"display" : function() {
