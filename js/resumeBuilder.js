@@ -13,7 +13,7 @@
 			"location" : "Redwood City, CA"
 		},
 		"welcomeMessage": "<p>Hello! My name is Jason Taylor and I am a web developer living and working in the San Francisco Bay Area. I love creating engaging web projects which allow me to use both the left and right sides of my brain to create a visually appealing yet highly functional end-user experience.<\/p><p>Feel free to peruse my resume and contact me if you like what you see. Thanks for stopping by!<\/p>",
-		"skills": ["HTML", "CSS", "Javascript", "JQuery", "PHP", "MySQL", "AJAX", "Responsive design"],
+		"skills": ["HTML", "CSS", "Javascript", "JQuery", "AngularJS", "PHP", "MySQL", "AJAX", "Responsive design"],
 		"biopic": "images/jason-taylor.jpg",
 		"display" : function() {
 			// Display name, role, picture and welcome message
@@ -119,7 +119,7 @@
 				"title": "Web Designer",
 				"location": "Redwood City, CA",
 				"dates": "2006 - Present",
-				"description": "<ul><li>Designed websites using hand-coded HTML and Cascading Style sheets (CSS).<\/li><li>Used PHP to create dynamic web pages that access back-end MySQL databases.<\/li><li>Created websites using the Drupal content management system and providing additional functionality through custom-coded PHP modules.<\/li><li>Used Adobe Photoshop and Illustrator to design site UI mockups and web graphics that were then sliced and optimized in preparation to create CSS based site layouts.<\/li><li>Used JQuery, JavaScript to add client-side browser interactivity.<\/li><li>Created graphics for print media such as brochures, flyers and postcards and worked with print houses to ensure quality results.<\/li><\/ul><p>HTML, CSS, PHP, MySQL, JQuery, JavaScript, AJAX, Twitter Bootstrap, Codeigniter, Drupal CMS, ASP.NET/SQL Server, Git, GitHub<\/p><a href=\"http:\/\/www.faultlinemedia.com\" target=\"_blank\">www.faultlinemedia.com<\/a>"
+				"description": "<ul><li>Designed websites using hand-coded HTML and Cascading Style sheets (CSS).<\/li><li>Used PHP to create dynamic web pages that access back-end MySQL databases.<\/li><li>Created websites using the Drupal content management system and providing additional functionality through custom-coded PHP modules.<\/li><li>Used Adobe Photoshop and Illustrator to design site UI mockups and web graphics that were then sliced and optimized in preparation to create CSS based site layouts.<\/li><li>Used JQuery, JavaScript to add client-side browser interactivity.<\/li><li>Created graphics for print media such as brochures, flyers and postcards and worked with print houses to ensure quality results.<\/li><\/ul><p>HTML, CSS, PHP, MySQL, JQuery, JavaScript, AJAX, AngularJS, Twitter Bootstrap, Codeigniter, Drupal CMS, ASP.NET/SQL Server, Git, GitHub<\/p><a href=\"http:\/\/www.faultlinemedia.com\" target=\"_blank\">www.faultlinemedia.com<\/a>"
 			},
 			{
 				"employer" : "Coding Dojo",
@@ -165,6 +165,18 @@
 	var projects = {
 		"project" : [
 			{
+				"title": "<strong>GP<\/strong><span style='color: red'>Pro<\/span>",
+				"dates": "2015",
+				"description": "An AngularJS driven Formula One Racing app that displays race results, driver bios and more.",
+				"images": ["images/projects/thumb/gp-pro-d.jpg"],
+				"details" : {
+					"url": "http://jastylr.github.io/F1-App/",
+					"image" : "images/projects/large/gp-pro.jpg",
+					"description" : "<p>I created the GPPro app after stumbling across a tutorial on AngularJS which used an API developed by Ergast. The API provides information on Formula One racing stats including race results, circuit information, driver bios and more. Being a racing fan myself, I decided to have my own go at creating an AngularJS app using this freely provided API. Big thanks to the folks at Ergast!<\/p><p>I had a great time working on this application, from writing the code to designing the logo. Before this app, I had not spent a great deal of time working with AngularJS but during this process, I've come to really enjoy it!<\/p>",
+					"technologies": ["AngularJS", "Bootstrap", "Ergast API", "Flickr API", "MediaWiki API"]
+				}
+			},
+			{
 				"title": "NanoFrogger",
 				"dates": "2015",
 				"description": "A JavaScript/HTML5 Canvas Game.",
@@ -202,7 +214,7 @@
 			},
 			{
 				"title": "NoXcuses Fitness",
-				"dates": "2015",
+				"dates": "2014",
 				"description": "A responsive website design that incorporates the MindBody API",
 				"images": ["images/projects/thumb/noxcusesfitness-d.jpg"],
 				"details" : {
