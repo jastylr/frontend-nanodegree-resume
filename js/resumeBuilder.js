@@ -281,7 +281,7 @@
 					"url": "http://www.californiasportshalloffame.org",
 					"image" : "images/projects/large/californiasportshalloffame.jpg",
 					"description" : "<p>Another site for ex-NFLer, Christian Okoye who put together and runs the California Sports Hall of Fame. This site showcases it's inductees and provides biographies, video montages and image galleries from past and present events.<\/p><p>The site is a responsive design and also provides e-commerce functionality.<\/p>",
-					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Photoshop"]
+					"technologies": ["HTML", "CSS", "PHP/MySQL", "JQuery", "Responsive Design", "Photoshop"]
 				}
 			},
 			{
