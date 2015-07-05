@@ -44,8 +44,10 @@ var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p class="project-description"><br>%data%</p>';
 var HTMLprojectImagesStart = '<div class="fadein"></div>';
 var HTMLprojectImage = '<a href="#" data-featherlight="#detail-%id%"><img src="%data%"></a>'; //<img src="%data%">';
-var HTMLprojectURL = '<a class="url-btn btn btn-info" href="%data%" target="_blank" data-toggle="tooltip" data-placement="top" title="Launch %title%">Launch Site</a>';
-var HTMLprojectView = '<a class="details-btn btn btn-info" href="#" data-featherlight="#detail-%data%" data-toggle="tooltip" data-placement="top" title="View project details">View Details</a>';
+var HTMLprojectURL = '<a class="url-btn btn btn-primary" href="%data%" target="_blank" data-toggle="tooltip" data-placement="top" title="Launch %title%">Launch Site</a>';
+var HTMLprojectView = '<a class="details-btn btn btn-primary" href="#" data-featherlight="#detail-%data%" data-toggle="tooltip" data-placement="top" title="View project details">View Details</a>';
+var HTMLprojectTechStart = '<div class="tech-list"></div>';
+var HTMLprojectTech = '<span class="label label-info">%data%</span>';//'<li class="orange-text">%data%</li>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';

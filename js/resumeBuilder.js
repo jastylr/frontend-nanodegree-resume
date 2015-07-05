@@ -165,7 +165,7 @@
 	var projects = {
 		"project" : [
 			{
-				"title": "<strong>GP<\/strong><span style='color: red'>Pro<\/span>",
+				"title": "GPPro",
 				"dates": "2015",
 				"description": "An AngularJS driven Formula One Racing app that displays race results, driver bios and more.",
 				"images": ["images/projects/thumb/gp-pro-d.jpg"],
@@ -343,6 +343,14 @@
 						var image = HTMLprojectImage.replace('%data%', projects.project[project].images[image]);
 						image = image.replace('%id%', project);
 						$('.project-entry:last .fadein:last').append(image);
+					}
+				}
+
+				$('.project-entry:last').append(HTMLprojectTechStart);
+				// Loop through and create a list of the technologies used on this project
+				if (projects.project[project].details.technologies.length > 0) {
+					for (technology in projects.project[project].details.technologies) {
+						$('.tech-list:last').append(HTMLprojectTech.replace('%data%', projects.project[project].details.technologies[technology]));
 					}
 				}
 
