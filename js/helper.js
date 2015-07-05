@@ -31,8 +31,8 @@ var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills"
 var HTMLskills = '<li class="flex-item"><span class="orange-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="row"><div class="work-entry col-md-12"></div></div>';
-var HTMLworkEmployer = '<a class="employer" href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkEmployer = '<h3 class="employer">%data%';
+var HTMLworkTitle = ' - %data%</h3>';
 var HTMLworkDateLocStart = '<div class="date-location clearfix"></div>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
@@ -41,7 +41,7 @@ var HTMLworkDescription = '%data%';
 var HTMLprojectStart = '<div id="project-%id%" class="project-entry col-md-4 col-sm-6 clearfix"></div>';
 var HTMLprojectTitle = '<a class="project-title" href="#" data-featherlight="#detail-%id%">%data%</a>'; //<a href="#">%data%</a>
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p class="project-description"><br>%data%</p>';
+var HTMLprojectDescription = '<p class="project-description">%data%</p>';
 var HTMLprojectImagesStart = '<div class="fadein"></div>';
 var HTMLprojectImage = '<a href="#" data-featherlight="#detail-%id%"><img src="%data%"></a>'; //<img src="%data%">';
 var HTMLprojectURL = '<a class="url-btn btn btn-primary" href="%data%" target="_blank" data-toggle="tooltip" data-placement="top" title="Launch %title%">Launch Site</a>';

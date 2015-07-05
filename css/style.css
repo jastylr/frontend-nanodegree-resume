@@ -148,6 +148,10 @@ a {
   color: #F5AE23;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .white-text {
   font-weight: bold;
   color: #FFFFFF;
@@ -279,6 +283,7 @@ h1#name + span {
 .employer,
 .project-title {
   font-size: 1.3em;
+  font-weight: 700;
 }
 
 #topContacts,
@@ -314,7 +319,8 @@ h1#name + span {
 
 .project-entry p.project-description {
   clear: both;
-  height: 4.4em;
+  height: 3.0em;
+  margin-top: 10px;
   overflow: hidden;
 }
 
@@ -405,6 +411,10 @@ h1#name + span {
 
 .work-entry li {
   padding: .2em 0;
+}
+
+.featherlight-close-icon {
+  line-height: 30px !important;
 }
 
 .featherlight .featherlight-content {

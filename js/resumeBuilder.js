@@ -116,10 +116,10 @@
 		"jobs": [
 			{
 				"employer": "Faultline Media Solutions",
-				"title": "Web Designer",
+				"title": "Web Developer",
 				"location": "Redwood City, CA",
 				"dates": "2006 - Present",
-				"description": "<ul><li>Designed websites using hand-coded HTML and Cascading Style sheets (CSS).<\/li><li>Used PHP to create dynamic web pages that access back-end MySQL databases.<\/li><li>Created websites using the Drupal content management system and providing additional functionality through custom-coded PHP modules.<\/li><li>Used Adobe Photoshop and Illustrator to design site UI mockups and web graphics that were then sliced and optimized in preparation to create CSS based site layouts.<\/li><li>Used JQuery, JavaScript to add client-side browser interactivity.<\/li><li>Created graphics for print media such as brochures, flyers and postcards and worked with print houses to ensure quality results.<\/li><\/ul><p>HTML, CSS, PHP, MySQL, JQuery, JavaScript, AngularJS, AJAX, Twitter Bootstrap, Codeigniter, Drupal CMS, ASP.NET/SQL Server, Git, GitHub<\/p><a href=\"http:\/\/www.faultlinemedia.com\" target=\"_blank\">www.faultlinemedia.com<\/a>"
+				"description": "<ul><li>Design websites using hand-coded HTML and Cascading Style sheets (CSS).<\/li><li>Use PHP to create dynamic web pages that access back-end MySQL databases.<\/li><li>Create websites using the Drupal content management system, providing additional functionality through custom-coded PHP modules.<\/li><li>Use Adobe Photoshop and Illustrator to design site UI mockups and web graphics which are then sliced and optimized in preparation to create CSS based site layouts.<\/li><li>Use JQuery, JavaScript to add client-side browser interactivity.<\/li><li>Create site graphics such as logos and other image assets for use in custom site designs<\/li><li>Create graphics for print media such as brochures, flyers and postcards and worked with print houses to ensure quality results.<\/li><\/ul><h4>Technologies used:<\/h4><p class='orange-text bold'>HTML, CSS, PHP, MySQL, JQuery, JavaScript, AngularJS, AJAX, Twitter Bootstrap, Codeigniter, Drupal CMS, ASP.NET/SQL Server, Git, GitHub<\/p><a href=\"http:\/\/www.faultlinemedia.com\" target=\"_blank\">www.faultlinemedia.com<\/a>"
 			},
 			{
 				"employer" : "Coding Dojo",
@@ -179,7 +179,7 @@
 			{
 				"title": "NanoFrogger",
 				"dates": "2015",
-				"description": "A JavaScript/HTML5 Canvas Game.",
+				"description": "A JavaScript/HTML5 Canvas Game based on the classic Frogger arcade game.",
 				"images": ["images/projects/thumb/nanofrogger-d.jpg"],
 				"details" : {
 					"url": "http://jastylr.github.io/frontend-nanodegree-arcade-game/",
@@ -191,7 +191,7 @@
 			{
 				"title": "Online Resume",
 				"dates": "2015",
-				"description": "My JavaScript Resume.",
+				"description": "My JavaScript Resume and the page you're currently viewing : ).",
 				"images": ["images/projects/thumb/jasontaylor-d.jpg"],
 				"details" : {
 					"url": "http://jastylr.github.io",
@@ -215,7 +215,7 @@
 			{
 				"title": "NoXcuses Fitness",
 				"dates": "2014",
-				"description": "A responsive website design that incorporates the MindBody API",
+				"description": "A responsive website design that incorporates the MindBody API.",
 				"images": ["images/projects/thumb/noxcusesfitness-d.jpg"],
 				"details" : {
 					"url": "http://www.noxcusesfitness.com",
@@ -227,7 +227,7 @@
 			{
 				"title": "CrisisGuard",
 				"dates": "2013",
-				"description": "A responsive PHP site with a custom design",
+				"description": "A responsive PHP site with a custom design.",
 				"images": ["images/projects/thumb/crisisguard-d.jpg"],
 				"details" : {
 					"url": "http://www.crisisguard.com",
@@ -239,7 +239,7 @@
 			{
 				"title": "Mariette Chocolates",
 				"dates": "2014",
-				"description": "A responsive e-commerce site using Drupal and custom theme design",
+				"description": "A responsive e-commerce site using Drupal and custom theme design.",
 				"images": ["images/projects/thumb/mariettechocolates-d.jpg"],
 				"details" : {
 					"url": "http://www.mariettechocolates.com",
@@ -251,7 +251,7 @@
 			{
 				"title": "Christian Okoye",
 				"dates": "2013",
-				"description": "Website of ex-Kansas City Chief and NFL great, Christian Okoye (\"The Nigerian Nightmare\")",
+				"description": "Website of ex-Kansas City Chief and NFL great, Christian Okoye (\"The Nigerian Nightmare\").",
 				"images": ["images/projects/thumb/christianokoye-d.jpg"],
 				"details" : {
 					"url": "http://www.christianokoye.com",
@@ -263,7 +263,7 @@
 			{
 				"title": "Soul Pilates",
 				"dates": "2014",
-				"description": "Responsive website with a custom design and integrated MindBody API for class schedules",
+				"description": "Responsive website with a custom design and integrated MindBody API for class schedules.",
 				"images": ["images/projects/thumb/soulpilates-d.jpg"],
 				"details" : {
 					"url": "http://www.soulpilates.com",
@@ -275,7 +275,7 @@
 			{
 				"title": "California Sports Hall of Fame",
 				"dates": "2013",
-				"description": "Responsive website showcasing California sports inductees",
+				"description": "Responsive website showcasing California sports Hall of Fame inductees.",
 				"images": ["images/projects/thumb/californiasportshalloffame-d.jpg"],
 				"details" : {
 					"url": "http://www.californiasportshalloffame.org",
@@ -287,7 +287,7 @@
 			{
 				"title": "L'Escape Spa",
 				"dates": "2013",
-				"description": "An e-commerce website design for a local spa/salon",
+				"description": "An e-commerce website design for a local spa/salon.",
 				"images": ["images/projects/thumb/lescapespa-d.jpg"],
 				"details" : {
 					"url": "http://www.lescapespa.com",
@@ -299,7 +299,7 @@
 			{
 				"title": "Piazzas Fine Foods",
 				"dates": "2012",
-				"description": "A website design for a local supermarket chain",
+				"description": "A website design for a local supermarket chain.",
 				"images": ["images/projects/thumb/piazzasfinefoods-d.jpg"],
 				"details" : {
 					"url": "http://www.piazzasfinefoods.com",
@@ -311,7 +311,7 @@
 			{
 				"title": "Priority 1",
 				"dates": "2014",
-				"description": "A Drupal site for a public safety equipment company",
+				"description": "A Drupal site for a public safety equipment company.",
 				"images": ["images/projects/thumb/priority1pse-d.jpg"],
 				"details" : {
 					"url": "http://www.priority1pse.com",
@@ -330,7 +330,7 @@
 				$('.project-entry:last').append(projectTitle);
 
 				var projectDate = HTMLprojectDates.replace('%data%', projects.project[project].dates);
-				$('.project-entry:last').append(projectDate);
+				//$('.project-entry:last').append(projectDate);
 
 				var projectDesc = HTMLprojectDescription.replace('%data%', projects.project[project].description);
 				$('.project-entry:last').append(projectDesc);
