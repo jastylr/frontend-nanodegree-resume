@@ -115,8 +115,8 @@
 	var work = {
 		"jobs": [
 			{
-				"employer": "Faultline Media Solutions",
-				"title": "Web Developer",
+				"employer": "Faultline Media Solutions (Self-employed)",
+				"title": "Freelance Web Developer",
 				"location": "Redwood City, CA",
 				"dates": "2006 - Present",
 				"description": "<ul><li>Design websites using hand-coded HTML and Cascading Style sheets (CSS).<\/li><li>Use PHP to create dynamic web pages that access back-end MySQL databases.<\/li><li>Create websites using the Drupal content management system, providing additional functionality through custom-coded PHP modules.<\/li><li>Use Adobe Photoshop and Illustrator to design site UI mockups and web graphics which are then sliced and optimized in preparation to create CSS based site layouts.<\/li><li>Use JQuery, JavaScript to add client-side browser interactivity.<\/li><li>Create site graphics such as logos and other image assets for use in custom site designs<\/li><li>Create graphics for print media such as brochures, flyers and postcards and worked with print houses to ensure quality results.<\/li><\/ul><h4>Technologies used:<\/h4><p class='orange-text bold'>HTML, CSS, PHP, MySQL, JQuery, JavaScript, AngularJS, AJAX, Twitter Bootstrap, Codeigniter, Drupal CMS, ASP.NET/SQL Server, Git, GitHub<\/p><a href=\"http:\/\/www.faultlinemedia.com\" target=\"_blank\">www.faultlinemedia.com<\/a>"
