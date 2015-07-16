@@ -12,7 +12,7 @@
 			"linkedin" : "https://www.linkedin.com/in/jasonetaylor1",
 			"location" : "Redwood City, CA"
 		},
-		"welcomeMessage": "<p>Hello! My name is Jason Taylor and I am a web developer living and working in the San Francisco Bay Area. I love creating engaging web projects which allow me to use both the left and right sides of my brain to create a visually appealing yet highly functional end-user experience.<\/p><p>Feel free to peruse my resume and contact me if you like what you see. Thanks for stopping by!<\/p>",
+		"welcomeMessage": "<p>Hello! My name is Jason Taylor and I am currently a freelance web developer living in the San Francisco Bay Area. I enjoy learning new things and love creating engaging web projects which allow me to use both the left and right sides of my brain to create a visually appealing yet highly functional end-user experience.<\/p><p>Please feel free to look over my resume and contact me with potential job openings if you like what you see. Thanks for stopping by!<\/p>",
 		"skills": ["HTML", "CSS", "Javascript", "JQuery", "AngularJS", "PHP", "MySQL", "AJAX", "Responsive design"],
 		"biopic": "images/jason-taylor.jpg",
 		"display" : function() {
